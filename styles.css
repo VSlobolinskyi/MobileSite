@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "CustomFont";
+    src: url("PierSans-Regular.otf");
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+}
+.normal-font{
+    font-family: "CustomFont";
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 3px;
+    line-height: 400%;
+    font-size: 20px;
+}
+.upper-font{
+    font-family: "CustomFont";
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 3px;
+    line-height: 400%;
+    font-size: 14px;
+}
+.title{
+    font-family: "CustomFont";
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 30px;
+    font-size: 144px;
+    font-weight: bold;
+}
+
+
+input.search{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #F2F2F2;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 300%;
+}
+input.search:focus{
+    outline : none;
+}
+input.search::placeholder{
+    color:  #BBBDBF;
+}
+i.search{
+    display: inline;
+    font-size: 36px;
+}
+ul.menu{
+    display: none;
+    padding-left: 3%;
+    list-style-type: none;
+}
+li.menu-item{
+    font-weight: bold;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+
+div.header{
+    position: relative;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+}
+img.logo-header{
+    width: 30%; 
+    height: auto;
+}
+div.icons{
+    position: relative;
+    display: inline;
+    top: 0px;
+}
+i.cart{
+    display: inline; 
+    font-size: 14px; 
+    position: relative;
+    bottom: 22px;
+}
+p.cart-status{
+    display: inline;
+    position: relative;
+    font-size: 14px;
+    bottom: 22px;
+}
+p.stick{
+    display: inline;
+    font-size: 20px;
+    position: relative;
+    bottom: 22px;
+}
+i.bars{
+    display: inline; 
+    font-size: 24px; 
+    position: relative;
+    bottom: 20px;
+}
+
+
+div.collage1{
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+div.wrapper{
+    position: absolute;
+    background-color: black;
+    opacity: 0.1;
+}
+img.collage1{
+    width: 100%;
+    height: auto;
+}
+i.arrow{
+    font-size: 192px;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+div.arrows{
+    position: absolute;
+    min-width: 500px;
+    left: 5%;
+}
+
+
+div.collage2{
+    padding-top: 12%;
+}
+img.c2-img1{
+    position: relative;
+    width: 85%;
+    height: auto;
+    padding-left: 12%;
+}
+img.c2-img2{
+    position: relative;
+    width: 85%;
+    height: auto;
+    padding-left: 3%;
+}
+
+div.about{
+    padding-top: 8%;
+    padding-bottom: 15%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+div.gallery{
+    background-color: #F7F7F7;
+    padding: 1%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+img.gallery{
+    width: 47%;
+    height: auto;
+    padding: 1%;
+}
+
+
+div.footer{
+    background-color: #EDEFF2;
+    padding: 2%;
+}
+div.footer-icons{
+    padding-left: ;
+    padding-right: auto;
+    width: 315px;
+}
+i.footer-icon{
+    font-size: 108px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+img.logo-footer{
+    width: 30%; 
+    height: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+p.footer-text{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
