@@ -6,48 +6,68 @@
         <script src="script.js"></script>
     </head>
     <body onload="main()">
-        <div class="header">
-            <img src="images/renome.svg" class="logo-header"> 
-            <div class="icons">
-                <i class="fas fa-shopping-cart cart"></i>
-                <p class="normal-font cart-status"> 5 </p>
-                <p class="normal-font stick">|</p>
-                <i class="fas fa-bars bars" onclick="get_menu(this)" id="inactive"></i>
+        <div class="header" id="header">
+            <img src="images/renome.svg" class="logo-header" id="headerImg">  
+            <div class="icons" id="headerIcons">
+                <i class="fas fa-shopping-cart header-icons" id="cart"></i>
+                <p class="normal-font header-icons" id="cartStatus"> 5 </p>
+                <p class="normal-font header-icons" id="stick">|</p>
+                <i class="fas fa-bars header-icons" onclick="get_menu(this)" data-state="inactive" data-active="liHome" id="bars"></i>
             </div>
         </div>
         
-        <ul class="menu">
-            <input type="text" placeholder="search..." class="search">
-            <i class="fas fa-search search"></i>
-            <li class="upper-font menu-item">HOME</li>
-            <li class="upper-font menu-item">ABOUT</li>
-            <li class="upper-font menu-item">MENU</li>
-            <li class="upper-font menu-item">RESERVATIONS</li>
-            <li class="upper-font menu-item">BLOG</li>
-            <li class="upper-font menu-item">FEATURES</li>
-            <li class="upper-font menu-item">SHOP</li>
-            <li class="upper-font menu-item" style="border-bottom: none">CONTACT</li>
-        </ul>
-        <div class="collage1">
-            <p class="normal-font"></p>
-            <p class="normal-font"></p>
-            <div style="position: relative">
-                <div class="wrapper"></div> 
-                <img src="images/carousel_img_1.png" class="collage1">
-                <div class="arrows">
-                    <i class="far fa-caret-square-left arrow"></i>
-                    <i class="far fa-caret-square-right arrow"></i>
+        
+        <div class="home" id="home">
+            <ul class="menu" id="menu">
+                <div class="input-container" id="searchContainer">
+                    <input type="text" placeholder="Search..." class="search" onfocus="input_active(this)" onblur="input_inactive(this)" id="search">
+                    <i class="fas fa-search search" id="searchIcon"></i>
+                </div>
+                <li class="upper-font menu-item" id="lihome">HOME</li>
+                <li class="upper-font menu-item" id="liabout">ABOUT</li>
+                <li class="upper-font menu-item" id="limenu">MENU</li>
+                <li class="upper-font menu-item" id="lireservations">RESERVATIONS</li>
+                <li class="upper-font menu-item" id="liblog">BLOG</li>
+                <div class="submenu" onclick="get_submenu(this)" id="divfeatures">
+                    <li class="upper-font menu-item" id="lifeatures" data-value="FEATURES">FEATURES</li>
+                    <div class="menu-arrowContainer" id="arrowContainerFeatures">
+                        <i class="fas fa-angle-right li-arrow" id="arrowFeatures"></i>
+                    </div>
+                </div>
+
+                <li class="upper-font menu-item features-submenu" id="1features-submenu">One page</li>
+                <li class="upper-font menu-item features-submenu" id="2features-submenu">Portfolio</li>
+                <li class="upper-font menu-item features-submenu" id="3features-submenu">Shortcodes</li>
+
+                <li class="upper-font menu-item" id="liShop">SHOP</li>
+                <li class="upper-font menu-item" id="liContact">CONTACT</li>
+            </ul>
+            <div class="collage1" id="collage1">
+                <div class="collage1-InnerDiv">
+                    <div class="wrapper" id="wrapper"></div> 
+                    <img src="images/carousel_img_1.png" class="collage1" id="c1Img">
+                    <div class="collage1-text" id="c1Text">
+                        <p class = "line1">made with love</p>
+                        <p class = "line2">for you</p>
+                    </div>
+                    <div class="arrows" id="c1Arrows">
+                        <div class="c1-arrowContainer">
+                            <i class="fas fa-angle-left arrow"></i>
+                        </div>
+                        <div class="c1-arrowContainer">
+                            <i class="fas fa-angle-right arrow"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </div>
-        <div class="collage2">
-            <img src="images/about_img_2.png" class="c2-img1">
-            <img src="images/about_img_1.png" class="c2-img2">
+        <div class="collage2" id="collage2">
+            <img src="images/about_img_2.png" class="c2-img1" id="c2Img1">
+            <img src="images/about_img_1.png" class="c2-img2" id="c2Img2">
         </div>
-        <div class="about">
+        <div class="about" >
             <p class="title">about</p>
-            <p class="upper-font" style="color: #985E5B; padding-bottom: 3%; padding-top: 2%;">WE CREATE DELECIOUS MEMORIES</p>
+            <p class="upper-font about-f2">WE CREATE DELECIOUS MEMORIES</p>
             <p class="normal-font">
                 Renome it is renowned restaurant 
                 delights the senses with elegant ambiance,
@@ -63,10 +83,10 @@
                  restaurants to have a coveted
                 3—Star Michelin rating.</p>
         </div>
-        <div class="gallery">
-            <p class="title" style="text-align: center; padding-bottom: 1%;">gallery</p>
-            <p class="upper-font" style="color: #985E5B; text-align: center;padding-bottom: 8%;">MORE ABOUT US VIA PHOTOS</p>
-            <div >
+        <div class="gallery" id="gallery">
+            <p class="title gallery-f1">gallery</p>
+            <p class="upper-font gallery-f2">MORE ABOUT US VIA PHOTOS</p>
+            <div>
                 <img src="images/gallery_img_1.png" class="gallery">
                 <img src="images/gallery_img_2.png" class="gallery">
             </div>
@@ -79,18 +99,15 @@
                 <img src="images/gallery_img_6.png" class="gallery">
             </div>
         </div>
-        <div class="footer">
-           
-            
-            <p class="upper-font footer-text">FOLLOW US:</p>
-            <div class="footer-icons">
+        <div class="footer" id="footer">
+            <p class="upper-font footer-f1">FOLLOW US:</p>
+            <div class="footer-icons" id="footerIcons">
                 <i class="fab fa-google-plus-square footer-icon"></i>
                 <i class="fab fa-facebook-square footer-icon"></i>
                 <i class="fab fa-twitter-square footer-icon"></i>
             </div>
-            <img src="images/renome.svg" class="logo-footer" >
-            <p class="upper-font" style="text-align:center;">COPYRIGHT 2015 RENOME BY ESTETIQ</p>
-            
+            <img src="images/renome.svg" class="logo-footer" id="footerLogo">
+            <p class="upper-font footer-f2">COPYRIGHT 2015 RENOME BY ESTETIQ</p>
         </div>
     </body>
    
