@@ -34,83 +34,110 @@ body{
 }
 
 
-div.header{
+.header{
     position: relative;
+    display: flex;
+    justify-content: space-between;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 3%;
 }
-img.logo-header{
+.header__logo{
     width: 30%; 
     height: auto;
 }
-div.icons{
+.icons{
     position: relative;
-    display: inline-block;
-    visibility: hidden;
-    top: 0px;
-    width: 20%;
+    display: flex;
+    align-items: center;    
+    top: 0px;   
 }
-.header-icons{
+.icons__cart{
     display: inline-block; 
+    position: relative;
     font-size: 36px; 
+    padding: 0 10px 0;
+}
+.icons__cart-status{
+    font-family: "CustomFont";
+    display: inline-block; 
     position: relative;
-    bottom: 22px;
-    padding-left: 4%;
-    padding-right: 4%;
+    line-height: 100%;
+    padding: 0;
+    font-size: 36px; 
+    padding: 0 10px 0;
+}
+.icons__stick{
+    display: inline;
+    width: 2px;
+    height: 36px;
+    background-color: #000000;
+    margin: 0 10px 0;
+}
+.icons__bars{
+    display: inline-block; 
+    position: relative;
+    font-size: 36px; 
+    padding: 0 0 0 10px;
 }
 
 
-div.input-container{
+
+.menu_search{
     position: relative;
+    display: flex;
 }
-input.search{
+.search__input{
     border: none;
+    display: inline-block;
     font-size: 36px;
     font-weight: bold;
     line-height: 300%;
     padding-left: 3%;
-    width: 97%;
+    width: 94%;
 }
-input.search:focus{
+.search__input:focus{
     outline : none;
 }
-input.search::placeholder{
+.search__input::placeholder{
     color:  #BBBDBF;
 }
-i.search{
+.search__icon{
     display: inline-block;
     position: absolute;
     font-size: 36px;
-    right: 3%;
-    top: 30px;
+    padding-top: 33px;
 }
-ul.menu{
-    display: none;
-    list-style-type: none;
+.menu{
+    opacity: 0;
+    position: fixed;
+    list-style-type:none;
     padding-left: 0px;
     width: 100%;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    height: 1095px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    transition: all 0.4s;
 }
-ul.sub-menu{
-    display: none;
-}
-li.menu-item{
+.menu__item{
     font-weight: bold;
     padding-left: 3%;
     border-top: 4px solid #F2F2F2;
     font-size: 30px;
     letter-spacing: 5px;
     white-space: pre;
+    
 }
-i.li-arrow{
+.menu__arrow{
     padding-top: 15px;
     display: inline-block;
+    align-self: end;
     font-size: 60px;
     padding-left: 30px;
 }
-div.menu-arrowContainer{
+.menu__arrow-outline{
     display: inline-block;
     position: absolute;
     top: 15px;
@@ -119,156 +146,158 @@ div.menu-arrowContainer{
     height: 90px;
     width: 90px;
 }
-div.submenu{
+.menu__expandable-item{
     position: relative;
 }
-li.features-submenu{
+.menu__submenu{
     display: none;
 }
 
 
 
-div.home{
-    transition: height 0.2s;
-}
-div.collage1{
-    padding-top: 8%;
-    padding-bottom: 20%;
-}
-div.collage1-InnerDiv{
+.home{
+    display: flex;
     position: relative;
-    min-width: 500px;
+    margin: 100px 0 225px;
 }
-div.wrapper{
+.home__shader{
     position: absolute;
     background-color: black;
+    width: 100%;
+    height: 100%;
     opacity: 0.15;
 }
-img.collage1{
+.home__img{
     width: 100%;
     height: auto;
 }
-div.collage1-text{
+.home__text{
     position: absolute;
-    min-width: 500px;
-    left: 5%;
-    padding-bottom: 7%;
+    width: 900px;
+    left: 70px;
+    bottom: 435px;
 }
-p.line1{
+.home__text--white{
     font-family: "CustomFont";
     color: white; 
     font-size: 80px;
-    padding-left: 5%;
     line-height: 30%;
     font-weight: bold;
     letter-spacing: 15px
 }
-p.line2{
+.home__text--crimson{
     font-family: "CustomFont";
     color: #985E5B; 
     font-size: 65px;
-    padding-left: 5%;
     line-height: 60%;
     font-weight: bold;
     letter-spacing: 10px;
 }
-i.arrow{
-    display: inline-block;  
-    font-size: 192px;
-    color: white;
-    padding-top: 3px;
-    padding-right: 30px;
-    margin-left: 50px;
+.home__arrows{
+    position: absolute;
+    display: flex;
+    bottom: 150px;
+    justify-content: space-between;
+    width: 465px;
+    left: 70px;
 }
-div.c1-arrowContainer{
-    align-content: center;
-    display: inline-block;
+.home__arrow{
     position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
     border: 6px solid white;
     height: 200px;
     width: 200px;
-    margin-left: 30px;
-}
-div.arrows{
-    position: absolute;
-    min-width: 500px;
-    left: 5%;
+    font-size: 192px;
+    color: #FFFFFF;
 }
 
 
-img.c2-img1{
+.building{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.building__img1{
     position: relative;
     width: 85%;
     height: auto;
-    padding-left: 12%;
+    padding-left: 120px;
 }
-img.c2-img2{
+.building__img2{
     position: relative;
     width: 85%;
     height: auto;
-    padding-left: 3%;
+    bottom: 120px;
+    padding-left: 30px;
 }
 
 
-div.about{
-    padding-top: 8%;
-    padding-bottom: 15%;
-    padding-left: 3%;
-    padding-right: 3%;
+.about{
+    padding: 100px 30px 180px 30px;
 }
-p.about-f2{
+.about__slogan{
     color: #985E5B; 
-    padding-bottom: 3%; 
-    padding-top: 2%;
-}
+    padding-bottom: 30px; 
+    padding-top: 20px;
+}  
 
-
-div.gallery{
+.gallery{
+    position: relative;
     background-color: #F7F7F7;
-    padding: 1%;
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding: 180px 20px 180px 20px;
 }
-img.gallery{
+.gallery__row{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.gallery__img{
     width: 47%;
     height: auto;
-    padding: 1%;
+    padding: 15px;
 }
-p.gallery-f1{
+.gallery__title{
     text-align: center; 
-    padding-bottom: 1%;
+    padding-bottom: 35px;
 }
-p.gallery-f2{
+.gallery__slogan{
     color: #985E5B; 
     text-align: center;
-    padding-bottom: 8%;
+    padding-bottom: 90px;
 }
 
 
-div.footer{
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #EDEFF2;
     padding: 2%;
 }
-div.footer-icons{
+.networks{
+    align-self: center;
     padding-right: auto;
     width: 340px;
 }
-i.footer-icon{
+.networks__icon{
     font-size: 108px;
     padding-left: 8px;
     padding-right: 8px;
 }
-img.logo-footer{
+.footer__logo{
+    align-self: center;
     width: 30%; 
     height: auto;
-    padding-bottom: 5%;
-    padding-top: 5%;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
-p.footer-f1{
+.footer__follow-us{
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 2%;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
-p.footer-f2{
+.footer__copyright{
     text-align: center;
 }
