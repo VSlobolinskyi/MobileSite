@@ -9,37 +9,47 @@
         <div class="header" id="header">
             <img src="images/renome.svg" class="header__logo" id="headerImg">  
             <div class="icons" id="headerIcons">
-                <i class="fas fa-shopping-cart icons__cart" id="cart"></i>
+                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggle_cartMenu()"></i>
                 <p class="icons__cart-status" id="cartStatus"> 5 </p>
                 <div class="icons__stick"></div>
-                <i class="fas fa-bars icons__bars" onclick="get_menu(this)" data-state="closed" data-active="liHome" id="bars"></i>
+                <i class="fas fa-bars icons__bars" id="bars" onclick="toggle_menu()"></i>
             </div>
-        </div>
-        <ul class="menu" id="menu">
-            <div class="menu__search" id="searchContainer">
+        </div> 
+        <ul class="cart-menu cart-menu--hidden" id="cartMenu">
+            <li class="normal-font cart-menu__item">$44.50</li>
+            <li class="normal-font cart-menu__item">View cart</li>
+            <li class="normal-font cart-menu__item">Checkout</li>
+        </ul>
+        <ul class="menu menu--hidden" id="menu">
+            <div class="menu__search-item item--visible" name="rootItem">
                 <input type="text" placeholder="Search..." class="search__input" onfocus="input_active(this)" onblur="input_inactive(this)" id="search">
                 <div class="search__icon">
                     <i class="fas fa-search" id="searchIcon"></i>
                 </div>
             </div>
-            <li class="upper-font menu__item" id="lihome">HOME</li>
-            <li class="upper-font menu__item" id="liabout">ABOUT</li>
-            <li class="upper-font menu__item" id="limenu">MENU</li>
-            <li class="upper-font menu__item" id="lireservations">RESERVATIONS</li>
-            <li class="upper-font menu__item" id="liblog">BLOG</li>
-            <div class="menu__expandable-item" onclick="get_submenu(this)" id="divfeatures">
-                <li class="upper-font menu__item" id="lifeatures" data-value="FEATURES">FEATURES</li>
-                <div class="menu__arrow-outline">
-                    <i class="fas fa-angle-right menu__arrow" id="arrowFeatures"></i>
+            <div class="menu__back-item item--hidden" id="back" onclick="close_submenu(this)">
+                <li class="upper-font back-item__text">BACK</li>
+                <div class="menu__left-arrow-outline">
+                    <i class="fas fa-angle-left menu__arrow" id="arrowFeatures"></i>
                 </div>
             </div>
+            <li class="upper-font menu__item item--visible" name="rootItem">HOME</li>
+            <li class="upper-font menu__item item--visible" name="rootItem">ABOUT</li>
+            <li class="upper-font menu__item item--visible" name="rootItem">MENU</li>
+            <li class="upper-font menu__item item--visible" name="rootItem">RESERVATIONS</li>
+            <li class="upper-font menu__item item--visible" name="rootItem">BLOG</li>
+            <div class="menu__expandable-item item--visible" name="rootItem" id="features" onclick="open_submenu(this)">
+                <li class="upper-font menu__item">FEATURES</li>
+                <div class="menu__right-arrow-outline">
+                    <i class="fas fa-angle-right menu__arrow"></i>
+                </div>
+            </div>
+            <li class="upper-font menu__item item--visible" name="rootItem">SHOP</li>
+            <li class="upper-font menu__item item--visible" name="rootItem">CONTACT</li>
 
-            <li class="upper-font menu__item menu__submenu" id="1features-submenu">One page</li>
-            <li class="upper-font menu__item menu__submenu" id="2features-submenu">Portfolio</li>
-            <li class="upper-font menu__item menu__submenu" id="3features-submenu">Shortcodes</li>
-
-            <li class="upper-font menu__item" id="liShop">SHOP</li>
-            <li class="upper-font menu__item" id="liContact">CONTACT</li>
+            <li class="upper-font menu__submenu-item item--hidden" name="features">One page</li>
+            <li class="upper-font menu__submenu-item item--hidden" name="features">Portfolio</li>
+            <li class="upper-font menu__submenu-item item--hidden" name="features">Shortcodes</li>
         </ul>
         <div class="home" id="home">
             <div class="home__shader" id="wrapper"></div> 
