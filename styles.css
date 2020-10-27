@@ -88,6 +88,8 @@ body{
 .cart-menu{
     position: fixed;
     display: flex;
+    opacity: 0;
+    top: 160px;
     background-color: #FFF;
     list-style-type: none;
     flex-direction: column;
@@ -102,10 +104,6 @@ body{
     opacity: 1;
     top: 180px;
 }
-.cart-menu--hidden{
-    opacity: 0;
-    top: 160px;
-}
 .cart-menu__item{
     display: block;
     align-self: center;
@@ -113,9 +111,9 @@ body{
     font-weight: bold;
 }
 
-
 .menu{
     opacity: 0;
+    top: 80px;
     position: fixed;
     list-style-type:none;
     padding: 16px 0px 16px;
@@ -127,10 +125,6 @@ body{
 .menu--visible{
     opacity: 1;
     top: 100px;
-}
-.menu--hidden{
-    opacity: 0;
-    top: 80px;
 }
 .menu_search-item{
     position: relative;
@@ -151,11 +145,15 @@ body{
 .search__input::placeholder{
     color:  #BBBDBF;
 }
-.search__icon{
+.search__icon--visible{
     display: inline-block;
     position: absolute;
+    right: 30px;
     font-size: 36px;
     padding-top: 33px;
+}
+.search__icon--hidden{
+    display: none;
 }
 .menu__item{
     font-weight: bold;
@@ -171,11 +169,18 @@ body{
     letter-spacing: 5px;
     text-align: right;
 }
-.item--hidden{
+.back--hidden{
     display: none;
 }
-.item--visible{
+.back--visible{
     display: block;
+}
+.item-claster--hidden{
+    display: none;
+}
+.item-claster--visible{
+    display: flex;
+    flex-direction: column;
 }
 .menu__item:hover{
     color: var(--crimson);
@@ -349,12 +354,12 @@ body{
     background-color: #EDEFF2;
     padding: 2%;
 }
-.networks{
+.social-networks{
     align-self: center;
     padding-right: auto;
     width: 340px;
 }
-.networks__icon{
+.social-networks__icon{
     font-size: 108px;
     padding-left: 8px;
     padding-right: 8px;
