@@ -25,8 +25,8 @@ body {
 }
 
 .upper-font {
-    font-family: "PierSans";
-    text-transform: uppercase;
+	font-family: "PierSans";
+	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
@@ -99,12 +99,9 @@ body {
 
 .cart-menu {
 	position: fixed;
-	display: flex;
 	opacity: 0;
 	top: 160px;
 	background-color: #FFF;
-	list-style-type: none;
-	flex-direction: column;
 	padding: 0;
 	margin: 0;
 	width: 30%;
@@ -118,18 +115,21 @@ body {
 	top: 180px;
 }
 
+.cart-menu--undisplay {
+	display: none;
+}
+
 .cart-menu__item {
 	display: block;
-	align-self: center;
+	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
 }
 
 .menu {
 	opacity: 0;
-	top: 80px;
+	top: 110px;
 	position: fixed;
-	list-style-type: none;
 	padding: 16px 0px 16px;
 	width: 100%;
 	background-color: #FFF;
@@ -139,7 +139,11 @@ body {
 
 .menu--visible {
 	opacity: 1;
-	top: 100px;
+	top: 130px;
+}
+
+.menu--undisplay {
+	display: none;
 }
 
 .menu_search-item {
@@ -356,7 +360,6 @@ body {
 }
 
 .about__slogan {
-
 	color: var(--crimson);
 	padding-bottom: 30px;
 	padding-top: 20px;

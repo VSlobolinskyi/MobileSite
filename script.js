@@ -1,10 +1,20 @@
 function toggle_cart_menu(){
+    document.getElementById("cartMenu").classList.remove("cart-menu--undisplay");
     document.getElementById("cartMenu").classList.toggle("cart-menu--visible")
+    setTimeout(cart_menu_undisplay, 400);
+}
+function cart_menu_undisplay(){
+    if(!document.getElementById("cartMenu").classList.contains("cart-menu--visible")){
+        document.getElementById("cartMenu").classList.add("cart-menu--undisplay");
+    }
 }
 
 function toggle_menu(){
+    document.getElementById("menu").classList.remove("menu--undisplay");
     document.getElementById("menu").classList.toggle("menu--visible");
-    setTimeout(reset_menu, 400);
+    if(!(document.getElementById("menu").classList.contains("menu--visible"))){
+        setTimeout(reset_menu, 400);
+    }
 }
 function reset_menu(){
     let clusterToHide = document.getElementsByClassName("item-cluster--visible");
@@ -15,6 +25,7 @@ function reset_menu(){
     clusterToShow.classList.add("item-cluster--visible");
     document.getElementById("back").classList.remove("back--visible");
     document.getElementById("back").classList.add("back--hidden");
+    document.getElementById("menu").classList.add("menu--undisplay");
 }
 function open_submenu(item){
     let clusterToHide = document.getElementsByClassName("item-cluster--visible");

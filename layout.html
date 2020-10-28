@@ -2,13 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="C:\Users\vitalii.slobolinskyi\Projects\MoblileSite\styles.css">
-        <link rel="stylesheet" href="C:\Users\vitalii.slobolinskyi\Projects\MoblileSite\fontawesome-free-5.15.1-web\css\all.css">
+        <title>Renome</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
         <script src="script.js"></script>
     </head>
     <body>
         <div class="header">
-            <img src="images/renome.svg" class="header__logo">  
+            <img src="images/renome.svg" class="header__logo" alt="Not available">  
             <div class="icons">
                 <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggle_cart_menu()"></i>
                 <p class="icons__cart-status" id="cartStatus"> 5 </p>
@@ -16,14 +17,14 @@
                 <i class="fas fa-bars icons__bars" id="bars" onclick="toggle_menu()"></i>
             </div>
         </div> 
-        <ul class="cart-menu cart-menu--hidden" id="cartMenu">
-            <li class="normal-font cart-menu__item">$44.50</li>
-            <li class="normal-font cart-menu__item">View cart</li>
-            <li class="normal-font cart-menu__item">Checkout</li>
-        </ul>
-        <ul class="menu" id="menu">
+        <div class="cart-menu cart-menu--undisplay" id="cartMenu">
+            <p class="normal-font cart-menu__item">$44.50</p>
+            <p class="normal-font cart-menu__item">View cart</p>
+            <p class="normal-font cart-menu__item">Checkout</p>
+        </div>
+        <div class="menu menu--undisplay" id="menu">
             <div class="menu__back-item back--hidden" id="back" onclick="close_submenu()">
-                <li class="upper-font back-item__text">BACK</li>
+                <p class="upper-font back-item__text">back</p>
                 <div class="menu__left-arrow-outline">
                     <i class="fas fa-angle-left menu__arrow" id="arrowFeatures"></i>
                 </div>
@@ -35,29 +36,29 @@
                         <i class="fas fa-search"></i>
                     </div>
                 </div>
-                <li class="upper-font menu__item">home</li>
-                <li class="upper-font menu__item">about</li>
-                <li class="upper-font menu__item">menu</li>
-                <li class="upper-font menu__item">reservations</li>
-                <li class="upper-font menu__item">blog</li>
-                <div class="menu__expandable-item"  name="features" onclick="open_submenu(this)">
-                    <li class="upper-font menu__item">features</li>
+                <p class="upper-font menu__item">home</p>
+                <p class="upper-font menu__item">about</p>
+                <p class="upper-font menu__item">menu</p>
+                <p class="upper-font menu__item">reservations</p>
+                <p class="upper-font menu__item">blog</p>
+                <div class="menu__expandable-item" name="features" onclick="open_submenu(this)">
+                    <p class="upper-font menu__item">features</p>
                     <div class="menu__right-arrow-outline">
                         <i class="fas fa-angle-right menu__arrow"></i>
                     </div>
                 </div>
-                <li class="upper-font menu__item">shop</li>
-                <li class="upper-font menu__item">contact</li>
+                <p class="upper-font menu__item">shop</p>
+                <p class="upper-font menu__item">contact</p>
             </div>
             <div class="item-cluster--hidden" id="features" name="root">
-                <li class="normal-font menu__submenu-item">One page</li>
-                <li class="normal-font menu__submenu-item">Portfolio</li>
-                <li class="normal-font menu__submenu-item">Shortcodes</li>
+                <p class="normal-font menu__submenu-item">One page</p>
+                <p class="normal-font menu__submenu-item">Portfolio</p>
+                <p class="normal-font menu__submenu-item">Shortcodes</p>
             </div>
-        </ul>
+        </div>
         <div class="home" id="home">
             <div class="home__shader"></div> 
-            <img src="images/carousel_img_1.png" class="home__img">
+            <img src="images/carousel_img_1.png" class="home__img" alt="Not available">
             <div class="home__text">
                 <p class="home__text--white">made with love</p>
                 <p class="home__text--crimson">for you</p>
@@ -72,8 +73,8 @@
             </div>
         </div>
         <div class="building">
-            <img src="images/about_img_2.png" class="building__img1">
-            <img src="images/about_img_1.png" class="building__img2">
+            <img src="images/about_img_2.png" class="building__img1" alt="Not available">
+            <img src="images/about_img_1.png" class="building__img2" alt="Not available">
         </div>
         <div class="about">
             <h1 class="title">about</h1>
@@ -97,16 +98,16 @@
             <h1 class="title gallery__title">gallery</h1>
             <p class="upper-font gallery__slogan">more about us via photos</p>
             <div class="gallery__row">
-                <img src="images/gallery_img_1.png" class="gallery__img">
-                <img src="images/gallery_img_2.png" class="gallery__img">
+                <img src="images/gallery_img_1.png" class="gallery__img" alt="Not available">
+                <img src="images/gallery_img_2.png" class="gallery__img" alt="Not available">
             </div>
             <div class="gallery__row">
-                <img src="images/gallery_img_3.png" class="gallery__img">
-                <img src="images/gallery_img_4.png" class="gallery__img">
+                <img src="images/gallery_img_3.png" class="gallery__img" alt="Not available">
+                <img src="images/gallery_img_4.png" class="gallery__img" alt="Not available">
             </div>
             <div class="gallery__row">
-                <img src="images/gallery_img_5.png" class="gallery__img">
-                <img src="images/gallery_img_6.png" class="gallery__img">
+                <img src="images/gallery_img_5.png" class="gallery__img" alt="Not available">
+                <img src="images/gallery_img_6.png" class="gallery__img" alt="Not available">
             </div>
         </div>
         <div class="footer">
@@ -116,7 +117,7 @@
                 <i class="fab fa-facebook-square social-networks__icon"></i>
                 <i class="fab fa-twitter-square social-networks__icon"></i>
             </div>
-            <img src="images/renome.svg" class="footer__logo">
+            <img src="images/renome.svg" class="footer__logo" alt="Not available">
             <p class="upper-font footer__copyright">copyright 2015 renome by estetique</p>
         </div>
     </body>
