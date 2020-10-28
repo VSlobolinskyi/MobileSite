@@ -10,7 +10,7 @@
         <div class="header">
             <img src="images/renome.svg" class="header__logo">  
             <div class="icons">
-                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggle_cartMenu()"></i>
+                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggle_cart_menu()"></i>
                 <p class="icons__cart-status" id="cartStatus"> 5 </p>
                 <div class="icons__stick"></div>
                 <i class="fas fa-bars icons__bars" id="bars" onclick="toggle_menu()"></i>
@@ -28,39 +28,39 @@
                     <i class="fas fa-angle-left menu__arrow" id="arrowFeatures"></i>
                 </div>
             </div>
-            <div class="item-claster--visible" id="root">
-                <div class="menu__search-item" >
+            <div class="item-cluster--visible" id="root">
+                <div class="menu__search-item">
                     <input type="text" placeholder="Search..." class="search__input" onfocus="input_active()" onblur="input_inactive()">
                     <div class="search__icon search__icon--visible" id="searchIcon">
                         <i class="fas fa-search"></i>
                     </div>
                 </div>
-                <li class="upper-font menu__item" >HOME</li>
-                <li class="upper-font menu__item" >ABOUT</li>
-                <li class="upper-font menu__item" >MENU</li>
-                <li class="upper-font menu__item" >RESERVATIONS</li>
-                <li class="upper-font menu__item" >BLOG</li>
+                <li class="upper-font menu__item">home</li>
+                <li class="upper-font menu__item">about</li>
+                <li class="upper-font menu__item">menu</li>
+                <li class="upper-font menu__item">reservations</li>
+                <li class="upper-font menu__item">blog</li>
                 <div class="menu__expandable-item"  name="features" onclick="open_submenu(this)">
-                    <li class="upper-font menu__item">FEATURES</li>
+                    <li class="upper-font menu__item">features</li>
                     <div class="menu__right-arrow-outline">
                         <i class="fas fa-angle-right menu__arrow"></i>
                     </div>
                 </div>
-                <li class="upper-font menu__item">SHOP</li>
-                <li class="upper-font menu__item">CONTACT</li>
+                <li class="upper-font menu__item">shop</li>
+                <li class="upper-font menu__item">contact</li>
             </div>
-            <div class="item-claster--hidden" id="features" name="root">
-                <li class="upper-font menu__submenu-item">One page</li>
-                <li class="upper-font menu__submenu-item">Portfolio</li>
-                <li class="upper-font menu__submenu-item">Shortcodes</li>
+            <div class="item-cluster--hidden" id="features" name="root">
+                <li class="normal-font menu__submenu-item">One page</li>
+                <li class="normal-font menu__submenu-item">Portfolio</li>
+                <li class="normal-font menu__submenu-item">Shortcodes</li>
             </div>
         </ul>
         <div class="home" id="home">
             <div class="home__shader"></div> 
             <img src="images/carousel_img_1.png" class="home__img">
             <div class="home__text">
-                <p class = "home__text--white">made with love</p>
-                <p class = "home__text--crimson">for you</p>
+                <p class="home__text--white">made with love</p>
+                <p class="home__text--crimson">for you</p>
             </div>
             <div class="home__arrows">
                 <div class="home__arrow">
@@ -75,9 +75,9 @@
             <img src="images/about_img_2.png" class="building__img1">
             <img src="images/about_img_1.png" class="building__img2">
         </div>
-        <div class="about" >
+        <div class="about">
             <h1 class="title">about</h1>
-            <p class="about__slogan">WE CREATE DELECIOUS MEMORIES</p>
+            <p class="upper-font about__slogan">we create delecious memories</p>
             <p class="normal-font">
                 Renome it is renowned restaurant 
                 delights the senses with elegant ambiance,
@@ -95,7 +95,7 @@
         </div>
         <div class="gallery">
             <h1 class="title gallery__title">gallery</h1>
-            <p class="normal-font gallery__slogan">MORE ABOUT US VIA PHOTOS</p>
+            <p class="upper-font gallery__slogan">more about us via photos</p>
             <div class="gallery__row">
                 <img src="images/gallery_img_1.png" class="gallery__img">
                 <img src="images/gallery_img_2.png" class="gallery__img">
@@ -110,14 +110,14 @@
             </div>
         </div>
         <div class="footer">
-            <p class="upper-font footer__follow-us">FOLLOW US:</p>
+            <p class="upper-font footer__follow-us">follow us:</p>
             <div class="social-networks">
                 <i class="fab fa-google-plus-square social-networks__icon"></i>
                 <i class="fab fa-facebook-square social-networks__icon"></i>
                 <i class="fab fa-twitter-square social-networks__icon"></i>
             </div>
             <img src="images/renome.svg" class="footer__logo">
-            <p class="upper-font footer__copyright">COPYRIGHT 2015 RENOME BY ESTETIQ</p>
+            <p class="upper-font footer__copyright">copyright 2015 renome by estetique</p>
         </div>
     </body>
    

@@ -1,4 +1,4 @@
-function toggle_cartMenu(){
+function toggle_cart_menu(){
     document.getElementById("cartMenu").classList.toggle("cart-menu--visible")
 }
 
@@ -7,36 +7,36 @@ function toggle_menu(){
     setTimeout(reset_menu, 400);
 }
 function reset_menu(){
-    let clasterToHide = document.getElementsByClassName("item-claster--visible");
-    clasterToHide[0].classList.add("item-claster--hidden");
-    clasterToHide[0].classList.remove("item-claster--visible");
-    let clasterToShow = document.getElementById("root");
-    clasterToShow.classList.remove("item-claster--hidden");
-    clasterToShow.classList.add("item-claster--visible");
+    let clusterToHide = document.getElementsByClassName("item-cluster--visible");
+    clusterToHide[0].classList.add("item-cluster--hidden");
+    clusterToHide[0].classList.remove("item-cluster--visible");
+    let clusterToShow = document.getElementById("root");
+    clusterToShow.classList.remove("item-cluster--hidden");
+    clusterToShow.classList.add("item-cluster--visible");
     document.getElementById("back").classList.remove("back--visible");
     document.getElementById("back").classList.add("back--hidden");
 }
 function open_submenu(item){
-    let clasterToHide = document.getElementsByClassName("item-claster--visible");
-    clasterToHide[0].classList.add("item-claster--hidden");
-    clasterToHide[0].classList.remove("item-claster--visible");
-    let clasterToShow = document.getElementById(item.getAttribute("name"));
-    clasterToShow.classList.remove("item-claster--hidden");
-    clasterToShow.classList.add("item-claster--visible");
+    let clusterToHide = document.getElementsByClassName("item-cluster--visible");
+    clusterToHide[0].classList.add("item-cluster--hidden");
+    clusterToHide[0].classList.remove("item-cluster--visible");
+    let clusterToShow = document.getElementById(item.getAttribute("name"));
+    clusterToShow.classList.remove("item-cluster--hidden");
+    clusterToShow.classList.add("item-cluster--visible");
     document.getElementById("back").classList.remove("back--hidden")
     document.getElementById("back").classList.add("back--visible")
 }
 function close_submenu(){
-    let activeClaster = document.getElementsByClassName("item-claster--visible");
-    let clasterToShow = document.getElementById(activeClaster[0].getAttribute("name"));
-    if(activeClaster[0].getAttribute("name") == "root"){
+    let activecluster = document.getElementsByClassName("item-cluster--visible");
+    let clusterToShow = document.getElementById(activecluster[0].getAttribute("name"));
+    if(activecluster[0].getAttribute("name") == "root"){
         document.getElementById("back").classList.add("back--hidden");
         document.getElementById("back").classList.remove("back--visible");
     }
-    activeClaster[0].classList.add("item-claster--hidden");
-    activeClaster[0].classList.remove("item-claster--visible");
-    clasterToShow.classList.remove("item-claster--hidden");
-    clasterToShow.classList.add("item-claster--visible");
+    activecluster[0].classList.add("item-cluster--hidden");
+    activecluster[0].classList.remove("item-cluster--visible");
+    clusterToShow.classList.remove("item-cluster--hidden");
+    clusterToShow.classList.add("item-cluster--visible");
     
     
 }
