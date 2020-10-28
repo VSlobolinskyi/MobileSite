@@ -107,7 +107,7 @@ body {
 	width: 30%;
 	right: 100px;
 	z-index: 2;
-	transition: all 0.4s;
+	transition: opacity 0.4s, top 0.4s;
 }
 
 .cart-menu--visible {
@@ -116,7 +116,7 @@ body {
 }
 
 .cart-menu--undisplay {
-	display: none;
+	z-index: -1;
 }
 
 .cart-menu__item {
@@ -134,7 +134,7 @@ body {
 	width: 100%;
 	background-color: #FFF;
 	z-index: 1;
-	transition: all 0.4s;
+	transition: opacity 0.4s, top 0.4s;
 }
 
 .menu--visible {
@@ -143,7 +143,7 @@ body {
 }
 
 .menu--undisplay {
-	display: none;
+	z-index: -1;
 }
 
 .menu_search-item {
