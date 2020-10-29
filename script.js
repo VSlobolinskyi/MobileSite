@@ -1,19 +1,19 @@
 var submenuOrder = ["root"];
 
 function toggle_cart_menu(){
-    document.getElementById("cartMenu").classList.remove("cart-menu--undisplay");
-    document.getElementById("cartMenu").classList.toggle("cart-menu--visible");
+    document.getElementById("cartMenu").classList.remove("cart-menu--hidden");
+    document.getElementById("cartMenu").classList.toggle("cart-menu--fade-in");
     setTimeout(cart_menu_undisplay, 400);
 }
 function cart_menu_undisplay(){
-    if(!document.getElementById("cartMenu").classList.contains("cart-menu--visible")){
-        document.getElementById("cartMenu").classList.add("cart-menu--undisplay");
+    if(!document.getElementById("cartMenu").classList.contains("cart-menu--fade-in")){
+        document.getElementById("cartMenu").classList.add("cart-menu--hidden");
     }
 }
 function toggle_menu(){
-    document.getElementById("menu").classList.remove("menu--undisplay");
-    document.getElementById("menu").classList.toggle("menu--visible");
-    if(!(document.getElementById("menu").classList.contains("menu--visible"))){
+    document.getElementById("menu").classList.remove("menu--hidden");
+    document.getElementById("menu").classList.toggle("menu--fade-in");
+    if(!(document.getElementById("menu").classList.contains("menu--fade-in"))){
         setTimeout(reset_menu, 400);
     }
 }
@@ -26,7 +26,7 @@ function reset_menu(){
     clusterToShow.classList.add("item-cluster--visible");
     document.getElementById("back").classList.remove("back--visible");
     document.getElementById("back").classList.add("back--hidden");
-    document.getElementById("menu").classList.add("menu--undisplay");
+    document.getElementById("menu").classList.add("menu--hidden");
     submenuOrder = ["root"];
 }
 function open_submenu(item){

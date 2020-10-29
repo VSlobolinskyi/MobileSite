@@ -4,11 +4,14 @@
 }
 
 :root {
-	--crimson: #985E5B;
-}
-
-html {
-	scroll-behavior: smooth;
+    --crimson: #985E5B;
+    --white: #FFFFFF;
+    --black: #000000;
+    --inputGray: #BBBDBF;
+    --menuGray: #F2F2F2;
+    --arrowGray: #F0F0F0;
+    --lightGray: #F7F7F7;
+    --gray: #EDEFF2;
 }
 
 body {
@@ -49,7 +52,7 @@ body {
 	justify-content: space-between;
 	top: 0;
 	padding: 30px 30px 50px;
-	background-color: #FFF;
+	background-color: var(--white);
 	z-index: 1;
 }
 
@@ -86,7 +89,7 @@ body {
 	display: inline;
 	width: 2px;
 	height: 36px;
-	background-color: #000;
+	background-color: var(--black);
 	margin: 0 10px 0;
 }
 
@@ -98,10 +101,11 @@ body {
 }
 
 .cart-menu {
-	position: fixed;
+    position: fixed;
+    list-style-type: none;
 	opacity: 0;
 	top: 160px;
-	background-color: #FFF;
+	background-color: var(--white);
 	padding: 0;
 	margin: 0;
 	width: 30%;
@@ -110,12 +114,12 @@ body {
 	transition: opacity 0.4s, top 0.4s;
 }
 
-.cart-menu--visible {
+.cart-menu--fade-in {
 	opacity: 1;
 	top: 180px;
 }
 
-.cart-menu--undisplay {
+.cart-menu--hidden {
 	z-index: -1;
 }
 
@@ -127,22 +131,23 @@ body {
 }
 
 .menu {
-	opacity: 0;
+    list-style-type: none;
+    opacity: 0;
 	top: 110px;
 	position: fixed;
-	padding: 16px 0px 16px;
+	padding: 16px 0;
 	width: 100%;
-	background-color: #FFF;
+	background-color: var(--white);
 	z-index: 1;
 	transition: opacity 0.4s, top 0.4s;
 }
 
-.menu--visible {
+.menu--fade-in {
 	opacity: 1;
 	top: 130px;
 }
 
-.menu--undisplay {
+.menu--hidden {
 	z-index: -1;
 }
 
@@ -166,7 +171,7 @@ body {
 }
 
 .search__input::placeholder {
-	color: #BBBDBF;
+	color: var(--inputGray);
 }
 
 .search__icon--visible {
@@ -183,15 +188,15 @@ body {
 
 .menu__item {
 	font-weight: bold;
-	padding-left: 3%;
-	border-top: 4px solid #F2F2F2;
+	padding-left: 30px;
+	border-top: 4px solid var(--menuGray);
 	font-size: 30px;
 	letter-spacing: 5px;
 }
 
 .back-item__text {
 	font-weight: bold;
-	padding-right: 3%;
+	padding-right: 30px;
 	font-size: 30px;
 	letter-spacing: 5px;
 	text-align: right;
@@ -206,12 +211,16 @@ body {
 }
 
 .item-cluster--hidden {
-	display: none;
+    display: none;
+    list-style-type: none;
+    padding: 0;
 }
 
 .item-cluster--visible {
 	display: flex;
-	flex-direction: column;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
 }
 
 .menu__item:hover {
@@ -230,7 +239,7 @@ body {
 	position: absolute;
 	top: 15px;
 	right: 3%;
-	border: 4px solid #F0F0F2;
+	border: 4px solid var(--arrowGray);
 	height: 90px;
 	width: 90px;
 }
@@ -240,7 +249,7 @@ body {
 	position: absolute;
 	top: 15px;
 	left: 3%;
-	border: 4px solid #F0F0F2;
+	border: 4px solid var(--arrowGray);
 	height: 90px;
 	width: 90px;
 }
@@ -256,7 +265,7 @@ body {
 .menu__submenu-item {
 	font-weight: bold;
 	padding-left: 30px;
-	border-top: 4px solid #F2F2F2;
+	border-top: 4px solid var(--menuGray);
 	font-size: 30px;
 	letter-spacing: 5px;
 	white-space: pre;
@@ -274,7 +283,7 @@ body {
 
 .home__shader {
 	position: absolute;
-	background-color: #000;
+	background-color: var(--black);
 	width: 100%;
 	height: 100%;
 	opacity: 0.15;
@@ -294,7 +303,7 @@ body {
 
 .home__text--white {
 	font-family: "PierSans";
-	color: #FFF;
+	color: var(--white);
 	font-size: 80px;
 	line-height: 30%;
 	font-weight: bold;
@@ -324,11 +333,11 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: space-around;
-	border: 6px solid #FFF;
+	border: 6px solid var(--white);
 	height: 200px;
 	width: 200px;
 	font-size: 192px;
-	color: #FFF;
+	color: var(--white);
 }
 
 .building {
@@ -369,7 +378,7 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-color: #F7F7F7;
+	background-color: var(--lightGray);
 	padding: 180px 20px 180px;
 }
 
@@ -380,7 +389,7 @@ body {
 }
 
 .gallery__img {
-	width: 47%;
+	width: 50%;
 	height: auto;
 	padding: 15px;
 }
@@ -400,13 +409,12 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-color: #EDEFF2;
+	background-color: var(--gray);
 	padding: 30px;
 }
 
 .social-networks {
 	align-self: center;
-	padding-right: auto;
 	width: 340px;
 }
 
