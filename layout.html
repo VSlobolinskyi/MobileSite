@@ -12,7 +12,7 @@
             <img src="images/renome.svg" class="header__logo" alt="Not available">  
             <div class="icons">
                 <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggle_cart_menu()"></i>
-                <p class="icons__cart-status" id="cartStatus"> 5 </p>
+                <p class="icons__cart-status" id="cartStatus">5</p>
                 <div class="icons__stick"></div>
                 <i class="fas fa-bars icons__bars" id="bars" onclick="toggle_menu()"></i>
             </div>
@@ -41,7 +41,7 @@
                 <p class="upper-font menu__item">menu</p>
                 <p class="upper-font menu__item">reservations</p>
                 <p class="upper-font menu__item">blog</p>
-                <div class="menu__expandable-item" name="features" onclick="open_submenu(this)">
+                <div class="menu__expandable-item" id="features" onclick="open_submenu(this)">
                     <p class="upper-font menu__item">features</p>
                     <div class="menu__right-arrow-outline">
                         <i class="fas fa-angle-right menu__arrow"></i>
@@ -50,7 +50,7 @@
                 <p class="upper-font menu__item">shop</p>
                 <p class="upper-font menu__item">contact</p>
             </div>
-            <div class="item-cluster--hidden" id="features" name="root">
+            <div class="item-cluster--hidden" id="featuresSubmenu" name="root">
                 <p class="normal-font menu__submenu-item">One page</p>
                 <p class="normal-font menu__submenu-item">Portfolio</p>
                 <p class="normal-font menu__submenu-item">Shortcodes</p>
