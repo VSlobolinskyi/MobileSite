@@ -25,11 +25,10 @@ function toggleMenu(){
 
 function resetMenu(){
     let clusterToHide = document.getElementById(submenuOrder[submenuOrder.length-1]);
-    let back = document.getElementById("back").classList;
+    let back = document.getElementById("back");
     let clusterToShow = document.getElementById("root");
-    clusterToHide.classList.toggle("item-cluster--hidden");
-    clusterToShow.classList.toggle("item-cluster--hidden");
-    back.classList.remove("back--visible");
+    clusterToHide.classList.add("item-cluster--hidden");
+    clusterToShow.classList.remove("item-cluster--hidden");
     back.classList.add("back--hidden");
     document.getElementById("menu").classList.add("menu--hidden");
     submenuOrder = ["root"];

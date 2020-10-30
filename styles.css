@@ -92,7 +92,7 @@ body {
 }
 
 .cart-menu--hidden {
-	z-index: -1;
+	pointer-events: none;
 }
 
 .cart-menu__item {
@@ -125,7 +125,7 @@ body {
 }
 
 .menu--hidden {
-	z-index: -1;
+	pointer-events: none;
 }
 
 .menu_search-item {
