@@ -127,7 +127,12 @@ body {
 	display: block;
 	text-align: center;
 	font-size: 30px;
-	font-weight: bold;
+    font-weight: bold;
+    font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 3px;
+	line-height: 400%;
 }
 
 .menu {
@@ -188,10 +193,14 @@ body {
 
 .menu__item {
 	font-weight: bold;
-	padding-left: 30px;
 	border-top: 4px solid var(--menuGray);
-	font-size: 30px;
-	letter-spacing: 5px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "PierSans";
+	margin: 0;
+	padding: 0 0 0 30px;
+	line-height: 400%;
 }
 
 .back-item__text {
@@ -264,11 +273,14 @@ body {
 
 .menu__submenu-item {
 	font-weight: bold;
-	padding-left: 30px;
 	border-top: 4px solid var(--menuGray);
 	font-size: 30px;
 	letter-spacing: 5px;
-	white-space: pre;
+    white-space: pre;
+    font-family: "PierSans";
+	margin: 0;
+	padding: 0 0 0 30px;
+	line-height: 400%;
 }
 
 .menu__submenu-item:hover {
@@ -368,10 +380,33 @@ body {
 	padding: 100px 30px 180px;
 }
 
+.about__title{
+    font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 30px;
+	font-size: 144px;
+	font-weight: bold;
+}
+
 .about__slogan {
 	color: var(--crimson);
-	padding-bottom: 30px;
-	padding-top: 20px;
+    font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 20px 0 30px;
+	letter-spacing: 3px;
+	line-height: 400%;
+	font-size: 14px;
+}
+
+.about__text{
+    font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 3px;
+	line-height: 400%;
+	font-size: 20px;
 }
 
 .gallery {
@@ -396,13 +431,24 @@ body {
 
 .gallery__title {
 	text-align: center;
-	padding-bottom: 35px;
+    font-family: "PierSans";
+	margin: 0;
+	padding: 0 0 35px;
+	letter-spacing: 30px;
+	font-size: 144px;
+	font-weight: bold;
 }
 
 .gallery__slogan {
 	color: var(--crimson);
 	text-align: center;
-	padding-bottom: 90px;
+    font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 0 90px;
+	letter-spacing: 3px;
+	line-height: 400%;
+	font-size: 14px;
 }
 
 .footer {
@@ -434,10 +480,22 @@ body {
 
 .footer__follow-us {
 	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 20px;
+    font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 50px 0 20px;
+	letter-spacing: 3px;
+	line-height: 400%;
+	font-size: 14px;
 }
 
 .footer__copyright {
-	text-align: center;
+    text-align: center;
+    font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 3px;
+	line-height: 400%;
+	font-size: 14px;
 }
