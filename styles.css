@@ -4,46 +4,18 @@
 }
 
 :root {
-    --crimson: #985E5B;
-    --white: #FFFFFF;
-    --black: #000000;
-    --inputGray: #BBBDBF;
-    --menuGray: #F2F2F2;
-    --arrowGray: #F0F0F0;
-    --lightGray: #F7F7F7;
-    --gray: #EDEFF2;
+	--crimson: #985E5B;
+	--white: #FFFFFF;
+	--black: #000000;
+	--inputGray: #BBBDBF;
+	--menuGray: #F2F2F2;
+	--arrowGray: #F0F0F0;
+	--lightGray: #F7F7F7;
+	--gray: #EDEFF2;
 }
 
 body {
 	margin: 0;
-}
-
-.normal-font {
-	font-family: "PierSans";
-	margin: 0;
-	padding: 0;
-	letter-spacing: 3px;
-	line-height: 400%;
-	font-size: 20px;
-}
-
-.upper-font {
-	font-family: "PierSans";
-	text-transform: uppercase;
-	margin: 0;
-	padding: 0;
-	letter-spacing: 3px;
-	line-height: 400%;
-	font-size: 14px;
-}
-
-.title {
-	font-family: "PierSans";
-	margin: 0;
-	padding: 0;
-	letter-spacing: 30px;
-	font-size: 144px;
-	font-weight: bold;
 }
 
 .header {
@@ -72,7 +44,7 @@ body {
 	display: inline-block;
 	position: relative;
 	font-size: 36px;
-	padding: 0 10px 0;
+	padding: 0 10px;
 }
 
 .icons__cart-status {
@@ -101,8 +73,8 @@ body {
 }
 
 .cart-menu {
-    position: fixed;
-    list-style-type: none;
+	position: fixed;
+	list-style-type: none;
 	opacity: 0;
 	top: 160px;
 	background-color: var(--white);
@@ -127,8 +99,8 @@ body {
 	display: block;
 	text-align: center;
 	font-size: 30px;
-    font-weight: bold;
-    font-family: "PierSans";
+	font-weight: bold;
+	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
@@ -136,8 +108,8 @@ body {
 }
 
 .menu {
-    list-style-type: none;
-    opacity: 0;
+	list-style-type: none;
+	opacity: 0;
 	top: 110px;
 	position: fixed;
 	padding: 16px 0;
@@ -194,10 +166,10 @@ body {
 .menu__item {
 	font-weight: bold;
 	border-top: 4px solid var(--menuGray);
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-family: "PierSans";
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 0 30px;
 	line-height: 400%;
@@ -205,31 +177,35 @@ body {
 
 .back-item__text {
 	font-weight: bold;
-	padding-right: 30px;
 	font-size: 30px;
 	letter-spacing: 5px;
 	text-align: right;
+	font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0px 30px 0 0;
+	line-height: 400%;
+}
+
+.back {
+	display: block;
 }
 
 .back--hidden {
 	display: none;
 }
 
-.back--visible {
-	display: block;
+.item-cluster {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	padding: 0;
 }
 
 .item-cluster--hidden {
-    display: none;
-    list-style-type: none;
-    padding: 0;
-}
-
-.item-cluster--visible {
-	display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
+	display: none;
+	list-style-type: none;
+	padding: 0;
 }
 
 .menu__item:hover {
@@ -276,8 +252,8 @@ body {
 	border-top: 4px solid var(--menuGray);
 	font-size: 30px;
 	letter-spacing: 5px;
-    white-space: pre;
-    font-family: "PierSans";
+	white-space: pre;
+	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 0 30px;
 	line-height: 400%;
@@ -380,8 +356,8 @@ body {
 	padding: 100px 30px 180px;
 }
 
-.about__title{
-    font-family: "PierSans";
+.about__title {
+	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
 	letter-spacing: 30px;
@@ -391,7 +367,7 @@ body {
 
 .about__slogan {
 	color: var(--crimson);
-    font-family: "PierSans";
+	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
 	padding: 20px 0 30px;
@@ -400,8 +376,8 @@ body {
 	font-size: 14px;
 }
 
-.about__text{
-    font-family: "PierSans";
+.about__text {
+	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
@@ -431,7 +407,7 @@ body {
 
 .gallery__title {
 	text-align: center;
-    font-family: "PierSans";
+	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 35px;
 	letter-spacing: 30px;
@@ -442,7 +418,7 @@ body {
 .gallery__slogan {
 	color: var(--crimson);
 	text-align: center;
-    font-family: "PierSans";
+	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0 0 90px;
@@ -480,7 +456,7 @@ body {
 
 .footer__follow-us {
 	text-align: center;
-    font-family: "PierSans";
+	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
 	padding: 50px 0 20px;
@@ -490,8 +466,8 @@ body {
 }
 
 .footer__copyright {
-    text-align: center;
-    font-family: "PierSans";
+	text-align: center;
+	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;

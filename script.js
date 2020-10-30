@@ -1,63 +1,70 @@
 var submenuOrder = ["root"];
 
-function toggle_cart_menu(){
-    document.getElementById("cartMenu").classList.remove("cart-menu--hidden");
-    document.getElementById("cartMenu").classList.toggle("cart-menu--fade-in");
-    setTimeout(cart_menu_undisplay, 400);
+function toggleCartMenu(){
+    cartMenu = document.getElementById("cartMenu");
+    cartMenu.classList.remove("cart-menu--hidden");
+    cartMenu.classList.toggle("cart-menu--fade-in");
+    setTimeout(cartMenuUndisplay, 400);
 }
-function cart_menu_undisplay(){
-    if(!document.getElementById("cartMenu").classList.contains("cart-menu--fade-in")){
-        document.getElementById("cartMenu").classList.add("cart-menu--hidden");
+
+function cartMenuUndisplay(){
+    cartMenu = document.getElementById("cartMenu");
+    if(!cartMenu.classList.contains("cart-menu--fade-in")){
+        cartMenu.classList.add("cart-menu--hidden");
     }
 }
-function toggle_menu(){
-    document.getElementById("menu").classList.remove("menu--hidden");
-    document.getElementById("menu").classList.toggle("menu--fade-in");
-    if(!(document.getElementById("menu").classList.contains("menu--fade-in"))){
-        setTimeout(reset_menu, 400);
+
+function toggleMenu(){
+    let menu = document.getElementById("menu");
+    menu.classList.remove("menu--hidden");
+    menu.classList.toggle("menu--fade-in");
+    if(!(menu.classList.contains("menu--fade-in"))){
+        setTimeout(resetMenu, 400);
     }
 }
-function reset_menu(){
+
+function resetMenu(){
     let clusterToHide = document.getElementById(submenuOrder[submenuOrder.length-1]);
-    clusterToHide.classList.add("item-cluster--hidden");
-    clusterToHide.classList.remove("item-cluster--visible");
+    let back = document.getElementById("back").classList;
     let clusterToShow = document.getElementById("root");
-    clusterToShow.classList.remove("item-cluster--hidden");
-    clusterToShow.classList.add("item-cluster--visible");
-    document.getElementById("back").classList.remove("back--visible");
-    document.getElementById("back").classList.add("back--hidden");
+    clusterToHide.classList.toggle("item-cluster--hidden");
+    clusterToShow.classList.toggle("item-cluster--hidden");
+    back.classList.remove("back--visible");
+    back.classList.add("back--hidden");
     document.getElementById("menu").classList.add("menu--hidden");
     submenuOrder = ["root"];
 }
-function open_submenu(item){
-    let clusterToHide = document.getElementById(submenuOrder[submenuOrder.length-1]);
-    clusterToHide.classList.add("item-cluster--hidden");
-    clusterToHide.classList.remove("item-cluster--visible");
+
+function openSubmenu(item){
     submenuOrder.push(item.getAttribute("id")+"Submenu");
     let clusterToShow = document.getElementById(submenuOrder[submenuOrder.length-1]);
-    clusterToShow.classList.remove("item-cluster--hidden");
-    clusterToShow.classList.add("item-cluster--visible");
-    document.getElementById("back").classList.remove("back--hidden");
-    document.getElementById("back").classList.add("back--visible");
+    let clusterToHide = document.getElementById(submenuOrder[submenuOrder.length-2]);
+    let back = document.getElementById("back").classList;
+    clusterToHide.classList.toggle("item-cluster--hidden");
+    clusterToShow.classList.toggle("item-cluster--hidden");
+    back.remove("back--hidden");
+    back.classList.add("back--visible");
 }
-function close_submenu(){
+
+function closeSubmenu(){
     let activecluster = document.getElementById(submenuOrder[submenuOrder.length-1]);
     let clusterToShow = document.getElementById(submenuOrder[submenuOrder.length-2]);
     if(submenuOrder[submenuOrder.length-2] == "root"){
-        document.getElementById("back").classList.add("back--hidden");
-        document.getElementById("back").classList.remove("back--visible");
+        document.getElementById("back").classList.toggle("back--hidden");
     }
-    activecluster.classList.add("item-cluster--hidden");
-    activecluster.classList.remove("item-cluster--visible");
-    clusterToShow.classList.remove("item-cluster--hidden");
-    clusterToShow.classList.add("item-cluster--visible");
+    activecluster.classList.toggle("item-cluster--hidden");
+    clusterToShow.classList.toggle("item-cluster--hidden");
     submenuOrder.pop();
 }
-function input_active(){
-    document.getElementById('searchIcon').classList.remove("search__icon--visible");
-    document.getElementById('searchIcon').classList.add("search__icon--hidden");
+
+function inputActive(){
+    let searchIcon = document.getElementById('searchIcon');
+    searchIcon.classList.remove("search__icon--visible");
+    searchIcon.classList.add("search__icon--hidden");
 }
+
 function input_inactive(){
-    document.getElementById('searchIcon').classList.add("search__icon--visible");
-    document.getElementById('searchIcon').classList.remove("search__icon--hidden");
+    let searchIcon = document.getElementById('searchIcon');
+    searchIcon.classList.add("search__icon--visible");
+    searchIcon.classList.remove("search__icon--hidden");
 }

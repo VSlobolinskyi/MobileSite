@@ -11,50 +11,54 @@
         <div class="header">
             <img src="images/renome.svg" class="header__logo" alt="Renome logo">  
             <div class="icons">
-                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggle_cart_menu()"></i>
+                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggleCartMenu()"></i>
                 <p class="icons__cart-status" id="cartStatus">5</p>
                 <div class="icons__stick"></div>
-                <i class="fas fa-bars icons__bars" id="bars" onclick="toggle_menu()"></i>
+                <i class="fas fa-bars icons__bars" id="bars" onclick="toggleMenu()"></i>
             </div>
         </div> 
-        <ul class="cart-menu cart-menu--undisplay" id="cartMenu">
+        <ul class="cart-menu cart-menu--hidden" id="cartMenu">
             <li class="cart-menu__item">$44.50</li>
             <li class="cart-menu__item">View cart</li>
             <li class="cart-menu__item">Checkout</li>
         </ul>
-        <ul class="menu menu--undisplay" id="menu">
-            <li class="menu__back-item back--hidden" id="back" onclick="close_submenu()">
+        <ul class="menu menu--hidden" id="menu">
+            <li class="menu__back-item back--hidden" id="back" onclick="closeSubmenu()">
                 <p class="back-item__text">back</p>
                 <div class="menu__left-arrow-outline">
                     <i class="fas fa-angle-left menu__arrow" id="arrowFeatures"></i>
                 </div>
             </li>
-            <ul class="item-cluster--visible" id="root">
-                <li class="menu__search-item">
-                    <input type="text" placeholder="Search..." class="search__input" onfocus="input_active()" onblur="input_inactive()">
-                    <div class="search__icon search__icon--visible" id="searchIcon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </li>
-                <li class="menu__item">home</li>
-                <li class="menu__item">about</li>
-                <li class="menu__item">menu</li>
-                <li class="menu__item">reservations</li>
-                <li class="menu__item">blog</li>
-                <li class="menu__expandable-item" id="features" onclick="open_submenu(this)">
-                    <p class="menu__item">features</p>
-                    <div class="menu__right-arrow-outline">
-                        <i class="fas fa-angle-right menu__arrow"></i>
-                    </div>
-                </li>
-                <li class="menu__item">shop</li>
-                <li class="menu__item">contact</li>
-            </ul>
-            <ul class="item-cluster--hidden" id="featuresSubmenu" name="root">
-                <li class="menu__submenu-item">One page</li>
-                <li class="menu__submenu-item">Portfolio</li>
-                <li class="menu__submenu-item">Shortcodes</li>
-            </ul>
+            <li>
+                <ul class="item-cluster" id="root">
+                    <li class="menu__search-item">
+                        <input type="text" placeholder="Search..." class="search__input" onfocus="inputActive()" onblur="inputInactive()">
+                        <div class="search__icon search__icon--visible" id="searchIcon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
+                    <li class="menu__item">home</li>
+                    <li class="menu__item">about</li>
+                    <li class="menu__item">menu</li>
+                    <li class="menu__item">reservations</li>
+                    <li class="menu__item">blog</li>
+                    <li class="menu__expandable-item" id="features" onclick="openSubmenu(this)">
+                        <p class="menu__item">features</p>
+                        <div class="menu__right-arrow-outline">
+                            <i class="fas fa-angle-right menu__arrow"></i>
+                        </div>
+                    </li>
+                    <li class="menu__item">shop</li>
+                    <li class="menu__item">contact</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="item-cluster item-cluster--hidden" id="featuresSubmenu">
+                    <li class="menu__submenu-item">One page</li>
+                    <li class="menu__submenu-item">Portfolio</li>
+                    <li class="menu__submenu-item">Shortcodes</li>
+                </ul>
+            </li>
         </ul>
         <div class="home" id="home">
             <div class="home__shader"></div> 
@@ -77,7 +81,7 @@
             <img src="images/about_img_1.png" class="building__img2" alt="Restorant enterance door view">
         </div>
         <div class="about">
-            <h1 class="about__title">about</h1>
+            <h2 class="about__title">about</h2>
             <p class="about__slogan">we create delecious memories</p>
             <p class="about__text">
                 Renome it is renowned restaurant 
@@ -95,7 +99,7 @@
                 3—Star Michelin rating.</p>
         </div>
         <div class="gallery">
-            <h1 class="gallery__title">gallery</h1>
+            <h2 class="gallery__title">gallery</h2>
             <p class="gallery__slogan">more about us via photos</p>
             <div class="gallery__row">
                 <img src="images/gallery_img_1.png" class="gallery__img" alt="Restorant building view">
