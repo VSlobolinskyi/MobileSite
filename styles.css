@@ -102,7 +102,7 @@ body {
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
-	line-height: 4rem;
+	line-height: 400%;
 }
 
 .menu {
@@ -136,7 +136,7 @@ body {
 	display: inline-block;
 	font-size: 36px;
 	font-weight: bold;
-	line-height: 3rem;
+	line-height: 300%;
 	padding-left: 30px;
 	width: 100%;
 }
@@ -170,7 +170,7 @@ body {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 0 30px;
-	line-height: 4rem;
+	line-height: 400%;
 	width: 100vw;
 }
 
@@ -183,7 +183,7 @@ body {
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0px 30px 0 0;
-	line-height: 4rem;
+	line-height: 400%;
 }
 
 .back {
@@ -212,7 +212,7 @@ body {
 	padding: 0;
 }
 
-.item-claster--submenu {
+.item-claster--submenu{
 	position: absolute;
 	top: 152px;
 }
@@ -249,7 +249,7 @@ body {
 	width: 90px;
 }
 
-.menu__submenu-arrow-outline {
+.menu__submenu-arrow-outline{
 	right: 60px;
 }
 
@@ -270,7 +270,7 @@ body {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 0 30px;
-	line-height: 4rem;
+	line-height: 400%;
 	width: 100vw;
 }
 
@@ -308,7 +308,7 @@ body {
 	font-family: "PierSans";
 	color: var(--white);
 	font-size: 80px;
-	line-height: 3rem;
+	line-height: 30%;
 	font-weight: bold;
 	letter-spacing: 15px
 }
@@ -317,7 +317,7 @@ body {
 	font-family: "PierSans";
 	color: var(--crimson);
 	font-size: 65px;
-	line-height: 6rem;
+	line-height: 60%;
 	font-weight: bold;
 	letter-spacing: 10px;
 }
@@ -383,7 +383,7 @@ body {
 	text-transform: uppercase;
 	color: var(--crimson);
 	letter-spacing: 3px;
-	line-height: 4rem;
+	line-height: 400%;
 	font-size: 14px;
 	margin: 0;
 	padding: 20px 0 30px;
@@ -394,7 +394,7 @@ body {
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
-	line-height: 4rem;
+	line-height: 400%;
 	font-size: 20px;
 }
 
@@ -435,7 +435,7 @@ body {
 	margin: 0;
 	padding: 0 0 90px;
 	letter-spacing: 3px;
-	line-height: 4rem;
+	line-height: 400%;
 	font-size: 14px;
 }
 
@@ -473,7 +473,7 @@ body {
 	margin: 0;
 	padding: 50px 0 20px;
 	letter-spacing: 3px;
-	line-height: 4rem;
+	line-height: 400%;
 	font-size: 30px;
 }
 
@@ -484,6 +484,7 @@ body {
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
-	line-height: 4rem;
+	line-height: 400%;
 	font-size: 30px;
 }
+
