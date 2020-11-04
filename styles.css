@@ -102,7 +102,7 @@ body {
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
-	line-height: 400%;
+	line-height: 120px;
 }
 
 .menu {
@@ -136,7 +136,7 @@ body {
 	display: inline-block;
 	font-size: 36px;
 	font-weight: bold;
-	line-height: 300%;
+	line-height: 120px;
 	padding-left: 30px;
 	width: 100%;
 }
@@ -154,7 +154,7 @@ body {
 	position: absolute;
 	right: 30px;
 	font-size: 36px;
-	top: 46px;
+	top: 55px;
 }
 
 .search__icon--hidden {
@@ -170,7 +170,7 @@ body {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 0 30px;
-	line-height: 400%;
+	line-height: 120px;
 	width: 100vw;
 }
 
@@ -182,8 +182,8 @@ body {
 	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
-	padding: 0px 30px 0 0;
-	line-height: 400%;
+	padding: 0 30px 0 0;
+	line-height: 120px;
 }
 
 .back {
@@ -212,7 +212,7 @@ body {
 	padding: 0;
 }
 
-.item-claster--submenu{
+.item-claster--submenu {
 	position: absolute;
 	top: 152px;
 }
@@ -249,7 +249,7 @@ body {
 	width: 90px;
 }
 
-.menu__submenu-arrow-outline{
+.menu__submenu-arrow-outline {
 	right: 60px;
 }
 
@@ -270,7 +270,7 @@ body {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0 0 0 30px;
-	line-height: 400%;
+	line-height: 120px;
 	width: 100vw;
 }
 
@@ -279,7 +279,6 @@ body {
 }
 
 .home {
-	display: flex;
 	position: relative;
 	margin: 200px 0 225px;
 }
@@ -308,7 +307,7 @@ body {
 	font-family: "PierSans";
 	color: var(--white);
 	font-size: 80px;
-	line-height: 30%;
+	margin: 0 0 20px;
 	font-weight: bold;
 	letter-spacing: 15px
 }
@@ -317,7 +316,7 @@ body {
 	font-family: "PierSans";
 	color: var(--crimson);
 	font-size: 65px;
-	line-height: 60%;
+	margin: 0 0 50px;
 	font-weight: bold;
 	letter-spacing: 10px;
 }
@@ -383,10 +382,9 @@ body {
 	text-transform: uppercase;
 	color: var(--crimson);
 	letter-spacing: 3px;
-	line-height: 400%;
+	padding: 35px 0 35px;
 	font-size: 14px;
 	margin: 0;
-	padding: 20px 0 30px;
 }
 
 .about__text {
@@ -394,7 +392,7 @@ body {
 	margin: 0;
 	padding: 0;
 	letter-spacing: 3px;
-	line-height: 400%;
+	line-height: 70px;
 	font-size: 20px;
 }
 
@@ -421,7 +419,7 @@ body {
 	text-align: center;
 	font-family: "PierSans";
 	margin: 0;
-	padding: 0 0 35px;
+	padding: 0;
 	letter-spacing: 30px;
 	font-size: 144px;
 	font-weight: bold;
@@ -433,9 +431,8 @@ body {
 	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
-	padding: 0 0 90px;
+	padding: 35px 0 90px;
 	letter-spacing: 3px;
-	line-height: 400%;
 	font-size: 14px;
 }
 
@@ -471,9 +468,8 @@ body {
 	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
-	padding: 50px 0 20px;
+	padding: 50px 0;
 	letter-spacing: 3px;
-	line-height: 400%;
 	font-size: 30px;
 }
 
@@ -482,9 +478,7 @@ body {
 	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 30px;
 	letter-spacing: 3px;
-	line-height: 400%;
 	font-size: 30px;
 }
-
