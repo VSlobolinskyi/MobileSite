@@ -1,54 +1,89 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="C:\Users\vitalii.slobolinskyi\Projects\MoblileSite\styles.css">
-        <link rel="stylesheet" href="C:\Users\vitalii.slobolinskyi\Projects\MoblileSite\fontawesome-free-5.15.1-web\css\all.css">
+        <title>Renome</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
         <script src="script.js"></script>
     </head>
-    <body onload="main()">
+    <body>
         <div class="header">
-            <img src="images/renome.svg" class="logo-header"> 
+            <img src="images/renome.svg" class="header__logo" alt="Renome logo">  
             <div class="icons">
-                <i class="fas fa-shopping-cart cart"></i>
-                <p class="normal-font cart-status"> 5 </p>
-                <p class="normal-font stick">|</p>
-                <i class="fas fa-bars bars" onclick="get_menu(this)" id="inactive"></i>
+                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggleCartMenu()"></i>
+                <p class="icons__cart-status" id="cartStatus">5</p>
+                <div class="icons__stick"></div>
+                <i class="fas fa-bars icons__bars" id="bars" onclick="toggleMenu()"></i>
             </div>
-        </div>
-        
-        <ul class="menu">
-            <input type="text" placeholder="search..." class="search">
-            <i class="fas fa-search search"></i>
-            <li class="upper-font menu-item">HOME</li>
-            <li class="upper-font menu-item">ABOUT</li>
-            <li class="upper-font menu-item">MENU</li>
-            <li class="upper-font menu-item">RESERVATIONS</li>
-            <li class="upper-font menu-item">BLOG</li>
-            <li class="upper-font menu-item">FEATURES</li>
-            <li class="upper-font menu-item">SHOP</li>
-            <li class="upper-font menu-item" style="border-bottom: none">CONTACT</li>
+        </div> 
+        <ul class="cart-menu cart-menu--hidden" id="cartMenu">
+            <li class="cart-menu__item">$44.50</li>
+            <li class="cart-menu__item">View cart</li>
+            <li class="cart-menu__item">Checkout</li>
         </ul>
-        <div class="collage1">
-            <p class="normal-font"></p>
-            <p class="normal-font"></p>
-            <div style="position: relative">
-                <div class="wrapper"></div> 
-                <img src="images/carousel_img_1.png" class="collage1">
-                <div class="arrows">
-                    <i class="far fa-caret-square-left arrow"></i>
-                    <i class="far fa-caret-square-right arrow"></i>
+        <ul class="menu menu--hidden" id="menu">
+            <li class="menu__back-item back--hidden" id="back" onclick="closeSubmenu()">
+                <p class="back-item__text">back</p>
+                <div class="menu__left-arrow-outline">
+                    <i class="fas fa-angle-left menu__arrow" id="arrowFeatures"></i>
+                </div>
+            </li>
+            <li>
+                <ul class="item-claster--visible" id="root">
+                    <li class="menu__search-item">
+                        <input type="text" placeholder="Search..." class="search__input" onfocus="inputActive()" onblur="inputInactive()">
+                        <div class="search__icon search__icon--visible" id="searchIcon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
+                    <li class="menu__item">home</li>
+                    <li class="menu__item">about</li>
+                    <li class="menu__item">menu</li>
+                    <li class="menu__item">reservations</li>
+                    <li class="menu__item">blog</li>
+                    <li>
+                        <div id="features" class="menu__expandable-item" onclick="openSubmenu(this)">
+                            <p class="menu__item">features</p>
+                            <div class="menu__right-arrow-outline">
+                                <i class="fas fa-angle-right menu__arrow"></i>
+                            </div>
+                         </div>
+                        <ul class="item-claster--hidden" id="featuresSubmenu">
+                            <li class="menu__submenu-item">One page</li>
+                            <li class="menu__submenu-item">Portfolio</li>
+                            <li class="menu__submenu-item">Shortcodes</li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">shop</li>
+                    <li class="menu__item">contact</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="home" id="home">
+            <div class="home__shader"></div> 
+            <img src="images/carousel_img_1.png" class="home__img" alt="Delecious omlette">
+            <div class="home__text-box">
+                <p class="home__text--white">made with love</p>
+                <p class="home__text--crimson">for you</p>
+            </div>
+            <div class="home__arrows">
+                <div class="home__arrow">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <div class="home__arrow">
+                    <i class="fas fa-angle-right"></i>
                 </div>
             </div>
-            
         </div>
-        <div class="collage2">
-            <img src="images/about_img_2.png" class="c2-img1">
-            <img src="images/about_img_1.png" class="c2-img2">
+        <div class="building">
+            <img src="images/about_img_2.png" class="building__img1" alt="Restorant full building view">
+            <img src="images/about_img_1.png" class="building__img2" alt="Restorant enterance door view">
         </div>
         <div class="about">
-            <p class="title">about</p>
-            <p class="upper-font" style="color: #985E5B; padding-bottom: 3%; padding-top: 2%;">WE CREATE DELECIOUS MEMORIES</p>
-            <p class="normal-font">
+            <h2 class="about__title">about</h2>
+            <p class="about__slogan">we create delecious memories</p>
+            <p class="about__text">
                 Renome it is renowned restaurant 
                 delights the senses with elegant ambiance,
                  gracious service and delectable
@@ -64,34 +99,30 @@
                 3—Star Michelin rating.</p>
         </div>
         <div class="gallery">
-            <p class="title" style="text-align: center; padding-bottom: 1%;">gallery</p>
-            <p class="upper-font" style="color: #985E5B; text-align: center;padding-bottom: 8%;">MORE ABOUT US VIA PHOTOS</p>
-            <div >
-                <img src="images/gallery_img_1.png" class="gallery">
-                <img src="images/gallery_img_2.png" class="gallery">
+            <h2 class="gallery__title">gallery</h2>
+            <p class="gallery__slogan">more about us via photos</p>
+            <div class="gallery__row">
+                <img src="images/gallery_img_1.png" class="gallery__img" alt="Restorant building view">
+                <img src="images/gallery_img_2.png" class="gallery__img" alt="Small restorant building view">
             </div>
-            <div>
-                <img src="images/gallery_img_3.png" class="gallery">
-                <img src="images/gallery_img_4.png" class="gallery">
+            <div class="gallery__row">
+                <img src="images/gallery_img_3.png" class="gallery__img" alt="Inside retorant view">
+                <img src="images/gallery_img_4.png" class="gallery__img" alt="Everyday specials banner">
             </div>
-            <div>
-                <img src="images/gallery_img_5.png" class="gallery">
-                <img src="images/gallery_img_6.png" class="gallery">
+            <div class="gallery__row">
+                <img src="images/gallery_img_5.png" class="gallery__img" alt="Salads">
+                <img src="images/gallery_img_6.png" class="gallery__img" alt="Snaks">
             </div>
         </div>
         <div class="footer">
-           
-            
-            <p class="upper-font footer-text">FOLLOW US:</p>
-            <div class="footer-icons">
-                <i class="fab fa-google-plus-square footer-icon"></i>
-                <i class="fab fa-facebook-square footer-icon"></i>
-                <i class="fab fa-twitter-square footer-icon"></i>
+            <p class="footer__follow-us">follow us:</p>
+            <div class="social-networks">
+                <i class="fab fa-google-plus-square social-networks__icon"></i>
+                <i class="fab fa-facebook-square social-networks__icon"></i>
+                <i class="fab fa-twitter-square social-networks__icon"></i>
             </div>
-            <img src="images/renome.svg" class="logo-footer" >
-            <p class="upper-font" style="text-align:center;">COPYRIGHT 2015 RENOME BY ESTETIQ</p>
-            
+            <img src="images/renome.svg" class="footer__logo" alt="Renome logo">
+            <p class="footer__copyright">copyright 2015 renome by estetique</p>
         </div>
     </body>
-   
 </html>

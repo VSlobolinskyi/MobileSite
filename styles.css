@@ -1,198 +1,484 @@
 @font-face {
-    font-family: "CustomFont";
-    src: url("PierSans-Regular.otf");
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    margin: 0px;
-}
-.normal-font{
-    font-family: "CustomFont";
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 3px;
-    line-height: 400%;
-    font-size: 20px;
-}
-.upper-font{
-    font-family: "CustomFont";
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 3px;
-    line-height: 400%;
-    font-size: 14px;
-}
-.title{
-    font-family: "CustomFont";
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 30px;
-    font-size: 144px;
-    font-weight: bold;
+	font-family: "PierSans";
+	src: url("PierSans-Regular.otf");
 }
 
-
-input.search{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid #F2F2F2;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 300%;
-}
-input.search:focus{
-    outline : none;
-}
-input.search::placeholder{
-    color:  #BBBDBF;
-}
-i.search{
-    display: inline;
-    font-size: 36px;
-}
-ul.menu{
-    display: none;
-    padding-left: 3%;
-    list-style-type: none;
-}
-li.menu-item{
-    font-weight: bold;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    border-top: 2px solid #F2F2F2;
-    border-bottom: 2px solid #F2F2F2;
+:root {
+	--crimson: #985E5B;
+	--white: #FFFFFF;
+	--black: #000000;
+	--inputGray: #BBBDBF;
+	--menuGray: #F2F2F2;
+	--arrowGray: #F0F0F0;
+	--lightGray: #F7F7F7;
+	--gray: #EDEFF2;
 }
 
-
-div.header{
-    position: relative;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 3%;
-}
-img.logo-header{
-    width: 30%; 
-    height: auto;
-}
-div.icons{
-    position: relative;
-    display: inline;
-    top: 0px;
-}
-i.cart{
-    display: inline; 
-    font-size: 14px; 
-    position: relative;
-    bottom: 22px;
-}
-p.cart-status{
-    display: inline;
-    position: relative;
-    font-size: 14px;
-    bottom: 22px;
-}
-p.stick{
-    display: inline;
-    font-size: 20px;
-    position: relative;
-    bottom: 22px;
-}
-i.bars{
-    display: inline; 
-    font-size: 24px; 
-    position: relative;
-    bottom: 20px;
+body {
+	margin: 0;
 }
 
-
-div.collage1{
-    padding-top: 8%;
-    padding-bottom: 8%;
-}
-div.wrapper{
-    position: absolute;
-    background-color: black;
-    opacity: 0.1;
-}
-img.collage1{
-    width: 100%;
-    height: auto;
-}
-i.arrow{
-    font-size: 192px;
-    color: white;
-    padding-left: 5%;
-    padding-right: 5%;
-    
-}
-div.arrows{
-    position: absolute;
-    min-width: 500px;
-    left: 5%;
+.header {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	padding: 30px 30px 50px;
+	background-color: var(--white);
+	z-index: 1;
 }
 
-
-div.collage2{
-    padding-top: 12%;
-}
-img.c2-img1{
-    position: relative;
-    width: 85%;
-    height: auto;
-    padding-left: 12%;
-}
-img.c2-img2{
-    position: relative;
-    width: 85%;
-    height: auto;
-    padding-left: 3%;
+.header__logo {
+	width: 30%;
+	height: auto;
 }
 
-div.about{
-    padding-top: 8%;
-    padding-bottom: 15%;
-    padding-left: 3%;
-    padding-right: 3%;
+.icons {
+	position: relative;
+	display: flex;
+	align-items: center;
+	top: 0;
 }
 
-div.gallery{
-    background-color: #F7F7F7;
-    padding: 1%;
-    padding-top: 15%;
-    padding-bottom: 15%;
-}
-img.gallery{
-    width: 47%;
-    height: auto;
-    padding: 1%;
+.icons__cart {
+	display: inline-block;
+	position: relative;
+	font-size: 36px;
+	padding: 0 10px;
 }
 
+.icons__cart-status {
+	font-family: "PierSans";
+	display: inline-block;
+	position: relative;
+	font-size: 36px;
+	padding: 0 10px;
+}
 
-div.footer{
-    background-color: #EDEFF2;
-    padding: 2%;
+.icons__stick {
+	display: inline;
+	width: 2px;
+	height: 36px;
+	background-color: var(--black);
+	margin: 0 10px;
 }
-div.footer-icons{
-    padding-left: ;
-    padding-right: auto;
-    width: 315px;
+
+.icons__bars {
+	display: inline-block;
+	position: relative;
+	font-size: 36px;
+	padding: 0 0 0 10px;
 }
-i.footer-icon{
-    font-size: 108px;
-    padding-left: 1%;
-    padding-right: 1%;
+
+.cart-menu {
+	position: fixed;
+	list-style-type: none;
+	opacity: 0;
+	top: 160px;
+	background-color: var(--white);
+	padding: 0;
+	margin: 0;
+	width: 30%;
+	right: 100px;
+	z-index: 2;
+	transition: opacity 0.4s, top 0.4s;
 }
-img.logo-footer{
-    width: 30%; 
-    height: auto;
-    padding-bottom: 5%;
-    padding-top: 5%;
+
+.cart-menu--fade-in {
+	opacity: 1;
+	top: 180px;
 }
-p.footer-text{
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 2%;
+
+.cart-menu--hidden {
+	pointer-events: none;
+}
+
+.cart-menu__item {
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 3px;
+	line-height: 120px;
+}
+
+.menu {
+	list-style-type: none;
+	opacity: 0;
+	top: 110px;
+	position: fixed;
+	padding: 16px 0;
+	width: 100%;
+	background-color: var(--white);
+	z-index: 1;
+	transition: opacity 0.4s, top 0.4s;
+}
+
+.menu--fade-in {
+	opacity: 1;
+	top: 130px;
+}
+
+.menu--hidden {
+	pointer-events: none;
+}
+
+.menu_search-item {
+	position: relative;
+	display: flex;
+}
+
+.search__input {
+	border: none;
+	display: inline-block;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 120px;
+	padding-left: 30px;
+	width: 100%;
+}
+
+.search__input:focus {
+	outline: none;
+}
+
+.search__input::placeholder {
+	color: var(--inputGray);
+}
+
+.search__icon {
+	display: inline-block;
+	position: absolute;
+	right: 30px;
+	font-size: 36px;
+	top: 55px;
+}
+
+.search__icon--hidden {
+	display: none;
+}
+
+.menu__item {
+	font-weight: bold;
+	border-top: 4px solid var(--menuGray);
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: "PierSans";
+	margin: 0;
+	padding: 0 0 0 30px;
+	line-height: 120px;
+	width: 100vw;
+}
+
+.back-item__text {
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: 5px;
+	text-align: right;
+	font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 30px 0 0;
+	line-height: 120px;
+}
+
+.back {
+	display: block;
+}
+
+.back--hidden {
+	display: none;
+}
+
+.item-claster--hidden {
+	height: 0;
+	visibility: hidden;
+	pointer-events: none;
+	list-style-type: none;
+	padding: 0;
+}
+
+.item-claster--visible {
+	height: auto;
+	visibility: visible;
+	pointer-events: auto;
+	background-color: var(--white);
+	flex-direction: column;
+	list-style-type: none;
+	padding: 0;
+}
+
+.item-claster--submenu {
+	position: absolute;
+	top: 152px;
+}
+
+.menu__item:hover {
+	color: var(--crimson);
+}
+
+.menu__arrow {
+	padding-top: 15px;
+	display: inline-block;
+	font-size: 60px;
+	padding-left: 30px;
+}
+
+.menu__right-arrow-outline {
+	display: inline-block;
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	border: 4px solid var(--arrowGray);
+	height: 90px;
+	width: 90px;
+	overflow: hidden;
+}
+
+.menu__left-arrow-outline {
+	display: inline-block;
+	position: absolute;
+	left: 30px;
+	top: 15px;
+	border: 4px solid var(--arrowGray);
+	height: 90px;
+	width: 90px;
+}
+
+.menu__submenu-arrow-outline {
+	right: 60px;
+}
+
+.menu__expandable-item {
+	position: relative;
+}
+
+.menu__back-item {
+	position: relative;
+}
+
+.menu__submenu-item {
+	font-weight: bold;
+	border-top: 4px solid var(--menuGray);
+	font-size: 30px;
+	letter-spacing: 5px;
+	white-space: pre;
+	font-family: "PierSans";
+	margin: 0;
+	padding: 0 0 0 30px;
+	line-height: 120px;
+	width: 100vw;
+}
+
+.menu__submenu-item:hover {
+	color: var(--crimson);
+}
+
+.home {
+	position: relative;
+	margin: 200px 0 225px;
+}
+
+.home__shader {
+	position: absolute;
+	background-color: var(--black);
+	width: 100%;
+	height: 100%;
+	opacity: 0.15;
+}
+
+.home__img {
+	width: 100%;
+	height: auto;
+}
+
+.home__text-box {
+	position: absolute;
+	width: 900px;
+	left: 70px;
+	bottom: 435px;
+}
+
+.home__text--white {
+	font-family: "PierSans";
+	color: var(--white);
+	font-size: 80px;
+	margin: 0 0 20px;
+	font-weight: bold;
+	letter-spacing: 15px
+}
+
+.home__text--crimson {
+	font-family: "PierSans";
+	color: var(--crimson);
+	font-size: 65px;
+	margin: 0 0 50px;
+	font-weight: bold;
+	letter-spacing: 10px;
+}
+
+.home__arrows {
+	position: absolute;
+	display: flex;
+	bottom: 150px;
+	justify-content: space-between;
+	width: 465px;
+	left: 70px;
+}
+
+.home__arrow {
+	position: relative;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	border: 6px solid var(--white);
+	height: 200px;
+	width: 200px;
+	font-size: 192px;
+	color: var(--white);
+}
+
+.building {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.building__img1 {
+	width: 85%;
+	height: auto;
+	padding-left: 120px;
+}
+
+.building__img2 {
+	position: relative;
+	width: 85%;
+	height: auto;
+	bottom: 120px;
+	padding-left: 30px;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	padding: 100px 30px 180px;
+}
+
+.about__title {
+	font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 30px;
+	font-size: 144px;
+	font-weight: bold;
+}
+
+.about__slogan {
+	font-family: "PierSans";
+	text-transform: uppercase;
+	color: var(--crimson);
+	letter-spacing: 3px;
+	padding: 35px 0 35px;
+	font-size: 14px;
+	margin: 0;
+}
+
+.about__text {
+	font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 3px;
+	line-height: 70px;
+	font-size: 20px;
+}
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--lightGray);
+	padding: 180px 20px 180px;
+}
+
+.gallery__row {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.gallery__img {
+	width: 50%;
+	height: auto;
+	padding: 15px;
+}
+
+.gallery__title {
+	text-align: center;
+	font-family: "PierSans";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 30px;
+	font-size: 144px;
+	font-weight: bold;
+}
+
+.gallery__slogan {
+	color: var(--crimson);
+	text-align: center;
+	font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 35px 0 90px;
+	letter-spacing: 3px;
+	font-size: 14px;
+}
+
+.footer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--gray);
+	padding: 30px;
+}
+
+.social-networks {
+	align-self: center;
+	width: 340px;
+}
+
+.social-networks__icon {
+	font-size: 108px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.footer__logo {
+	align-self: center;
+	width: 30%;
+	height: auto;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.footer__follow-us {
+	text-align: center;
+	font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 50px 0;
+	letter-spacing: 3px;
+	font-size: 30px;
+}
+
+.footer__copyright {
+	text-align: center;
+	font-family: "PierSans";
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 0 30px;
+	letter-spacing: 3px;
+	font-size: 30px;
 }

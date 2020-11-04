@@ -1,36 +1,80 @@
+var submenuOrder = ["root"];
 
-function main(){
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+function toggleCartMenu() {
+  cartMenu = document.getElementById("cartMenu");
+  cartMenu.classList.remove("cart-menu--hidden");
+  cartMenu.classList.toggle("cart-menu--fade-in");
+  setTimeout(cartMenuUndisplay, 400);
+}
 
-    let renome1 = document.querySelector('img.logo-header');
-    let icons = document.querySelector("div.icons");
-    icons.style.left = window.innerWidth*0.93-icons.offsetWidth-parseInt(getComputedStyle(renome1).width) + "px";
+function cartMenuUndisplay() {
+  cartMenu = document.getElementById("cartMenu");
+  if (!cartMenu.classList.contains("cart-menu--fade-in")) {
+    cartMenu.classList.add("cart-menu--hidden");
+  }
+}
 
-    let img = document.querySelector('img.collage1');
-    let wrapper = document.querySelector('div.wrapper')
-    wrapper.style.height =  getComputedStyle(img).height;
-    wrapper.style.width = getComputedStyle(img).width;
-    let arrows = document.querySelector("div.arrows");
-    arrows.style.bottom = parseInt(getComputedStyle(img).height)*0.1;
+function toggleMenu() {
+  let menu = document.getElementById("menu");
+  menu.classList.remove("menu--hidden");
+  menu.classList.toggle("menu--fade-in");
+  if (!(menu.classList.contains("menu--fade-in"))) {
+    setTimeout(resetMenu, 400);
+  }
+}
 
-    let renome2 = document.querySelector('img.logo-footer');
-    renome2.style.paddingLeft = (window.innerWidth*0.96 - parseInt(getComputedStyle(renome2).width))/2 +"px";
+function resetMenu() {
+  let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
+  let back = document.getElementById("back");
+  let clasterToShow = document.getElementById("root");
+  clasterToHide.classList.add("item-claster--hidden");
+  clasterToHide.classList.remove("item-claster--visible");
+  clasterToHide.classList.remove("item-claster--submenu");
+  clasterToShow.classList.add("item-claster--visible");
+  clasterToShow.classList.remove("item-claster--hidden");
+  back.classList.add("back--hidden");
+  document.getElementById("menu").classList.add("menu--hidden");
+  submenuOrder = ["root"];
+}
 
-    let footerIcons = document.querySelector('div.footer-icons');
-    footerIcons.style.paddingLeft = (window.innerWidth*0.96 - parseInt(getComputedStyle(footerIcons).width))/2 +"px";
+function openSubmenu(item) {
+  console.log(item.getAttribute("id"))
+  submenuOrder.push(item.getAttribute("id") + "Submenu");
+  let clasterToShow = document.getElementById(submenuOrder[submenuOrder.length - 1]);
+  let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 2]);
+  let back = document.getElementById("back");
+  clasterToHide.classList.add("item-claster--hidden");
+  clasterToHide.classList.remove("item-claster--visible");
+  clasterToHide.classList.remove("item-claster--submenu");
+  clasterToShow.classList.add("item-claster--visible");
+  clasterToShow.classList.remove("item-claster--hidden");
+  clasterToShow.classList.add("item-claster--submenu");
+  back.classList.remove("back--hidden");
+  back.classList.add("back--visible");
+}
 
-    let c2Img2 = document.querySelector('img.c2-img2');
-    c2Img2.style.bottom =  parseInt(getComputedStyle(c2Img2).height)*0.21+"px";
-}   
+function closeSubmenu() {
+  let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
+  let clasterToShow = document.getElementById(submenuOrder[submenuOrder.length - 2]);
+  clasterToHide.classList.add("item-claster--hidden");
+  clasterToHide.classList.remove("item-claster--visible");
+  clasterToShow.classList.remove("item-claster--submenu");
+  clasterToShow.classList.add("item-claster--visible");
+  clasterToShow.classList.remove("item-claster--hidden");
+  clasterToShow.classList.add("item-claster--submenu");
+  if (submenuOrder[submenuOrder.length - 2] == "root") {
+    document.getElementById("back").classList.toggle("back--hidden");
+    clasterToShow.classList.remove("item-claster--submenu");
+  }
+  submenuOrder.pop();
+}
 
-function get_menu(menu){
-    if(menu.id == "inactive"){
-        document.querySelector('ul.menu').style.display = "inline-block";
-        menu.id = "active";
-    }
-    else if(menu.id == "active"){
-        document.querySelector('ul.menu').style.display = "none";
-        menu.id = "inactive";
-    }
+function inputActive() {
+  let searchIcon = document.getElementById('searchIcon');
+  searchIcon.classList.toggle("search__icon--hidden");
+}
+
+function inputInactive() {
+  let searchIcon = document.getElementById('searchIcon');
+  searchIcon.classList.toggle("search__icon--hidden");
 }
