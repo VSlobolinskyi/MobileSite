@@ -14,16 +14,28 @@ function cartMenuUndisplay() {
   }
 }
 
-function toggleMenu() {
+function openMenu() {
   let menu = document.getElementById("menu");
+  let cross = document.getElementById("cross");
+  let bars = document.getElementById("bars");
+  cross.classList.toggle("icons--hidden");
+  bars.classList.toggle("icons--hidden");
   menu.classList.remove("menu--hidden");
   menu.classList.toggle("menu--fade-in");
-  if (!(menu.classList.contains("menu--fade-in"))) {
-    setTimeout(resetMenu, 400);
-  }
+}
+
+function closeMenu() {
+  let menu = document.getElementById("menu")
+  let cross = document.getElementById("cross");
+  let bars = document.getElementById("bars");
+  cross.classList.toggle("icons--hidden");
+  bars.classList.toggle("icons--hidden");
+  menu.classList.toggle("menu--fade-in");
+  setTimeout(resetMenu, 400);
 }
 
 function resetMenu() {
+  console.log("Here");
   let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
   let back = document.getElementById("back");
   let clasterToShow = document.getElementById("root");

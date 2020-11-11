@@ -4,17 +4,16 @@
         <meta charset="UTF-8">
         <title>Renome</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
-        <script src="script.js"></script>
     </head>
     <body>
         <div class="header">
-            <img src="images/renome.svg" class="header__logo" alt="Renome logo">  
+            <img src="icons/renome.svg" class="header__logo" alt="Renome logo">  
             <div class="icons">
-                <i class="fas fa-shopping-cart icons__cart" id="cart" onclick="toggleCartMenu()"></i>
+                <img src="icons/cart_icon.svg" class="icons__cart" id="cart" alt="Cart icon" onclick="toggleCartMenu()">
                 <p class="icons__cart-status" id="cartStatus">5</p>
                 <div class="icons__stick"></div>
-                <i class="fas fa-bars icons__bars" id="bars" onclick="toggleMenu()"></i>
+                <img src="icons/hamburger_button.svg" class="icons__hamburger-button" id="bars" alt="Hamburger button" onclick="openMenu()">
+                <img src="icons/cross_icon.svg" class="icons__cross icons--hidden" id="cross" alt="Cross icon" onclick="closeMenu()">
             </div>
         </div> 
         <ul class="cart-menu cart-menu--hidden" id="cartMenu">
@@ -26,7 +25,7 @@
             <li class="menu__back-item back--hidden" id="back" onclick="closeSubmenu()">
                 <p class="back-item__text">back</p>
                 <div class="menu__left-arrow-outline">
-                    <i class="fas fa-angle-left menu__arrow" id="arrowFeatures"></i>
+                    <img src="icons/arrow_left_black.svg" class="menu__arrow" alt="Black arrow left">
                 </div>
             </li>
             <li>
@@ -46,7 +45,7 @@
                         <div id="features" class="menu__expandable-item" onclick="openSubmenu(this)">
                             <p class="menu__item">features</p>
                             <div class="menu__right-arrow-outline">
-                                <i class="fas fa-angle-right menu__arrow"></i>
+                                <img src="icons/arrow_right_black.svg" class="menu__arrow" alt="Black arrow right">
                             </div>
                          </div>
                         <ul class="item-claster--hidden" id="featuresSubmenu">
@@ -67,12 +66,12 @@
                 <p class="home__text--white">made with love</p>
                 <p class="home__text--crimson">for you</p>
             </div>
-            <div class="home__arrows">
-                <div class="home__arrow">
-                    <i class="fas fa-angle-left"></i>
+            <div class="home__arrow-container">
+                <div class="home__arrow-outline">
+                    <img src="icons/arrow_left_white.svg" class="home__arrow" alt="White arrow left">
                 </div>
-                <div class="home__arrow">
-                    <i class="fas fa-angle-right"></i>
+                <div class="home__arrow-outline">
+                    <img src="icons/arrow_right_white.svg" class="home__arrow" alt="White arrow right">
                 </div>
             </div>
         </div>
@@ -80,7 +79,7 @@
             <img src="images/about_img_2.png" class="building__img1" alt="Restorant full building view">
             <img src="images/about_img_1.png" class="building__img2" alt="Restorant enterance door view">
         </div>
-        <div class="about">
+        <div class="about" id="follow">
             <h2 class="about__title">about</h2>
             <p class="about__slogan">we create delecious memories</p>
             <p class="about__text">
@@ -117,12 +116,16 @@
         <div class="footer">
             <p class="footer__follow-us">follow us:</p>
             <div class="social-networks">
-                <i class="fab fa-google-plus-square social-networks__icon"></i>
-                <i class="fab fa-facebook-square social-networks__icon"></i>
-                <i class="fab fa-twitter-square social-networks__icon"></i>
+                <img src="icons/google_plus_icon.svg" class="social-networks__icon" alt="Google plus icon">
+                <img src="icons/facebook_icon.svg" class="social-networks__icon" alt="Facebook icon">
+                <img src="icons/twitter_icon.svg" class="social-networks__icon" alt="Twitter icon">
             </div>
-            <img src="images/renome.svg" class="footer__logo" alt="Renome logo">
+            <img src="icons/renome.svg" class="footer__logo" alt="Renome logo">
             <p class="footer__copyright">copyright 2015 renome by estetique</p>
         </div>
+        <footer>
+            <script src="script.js"></script>
+        </footer>
     </body>
+    
 </html>
