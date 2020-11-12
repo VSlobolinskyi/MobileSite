@@ -21,14 +21,15 @@ body {
 	position: fixed;
 	display: flex;
 	justify-content: space-between;
+	width: 94vw;
 	top: 0;
-	padding: 30px 30px 50px;
+	padding: 2vh 3vw 2vh;
 	background-color: var(--white);
 	z-index: 1;
 }
 
 .header__logo {
-	width: 30%;
+	width: 18vh;
 	height: auto;
 }
 
@@ -36,44 +37,44 @@ body {
 	position: relative;
 	display: flex;
 	align-items: center;
-	top: 0;
+	top: 0.5vh;
 }
 
 .icons__cart {
 	display: inline-block;
 	position: relative;
-	height: 36px;
-	padding: 0 10px;
+	height: 2.5vh;
+	padding: 0 0.7vh;
 }
 
 .icons__cart-status {
 	font-family: "PierSans";
 	display: inline-block;
 	position: relative;
-	font-size: 36px;
-	padding: 0 10px;
+	font-size: 2.5vh;
+	padding: 0 0.7vh;
 }
 
 .icons__stick {
 	display: inline;
-	width: 2px;
-	height: 36px;
+	width: 0.2vh;
+	height: 2.5vh;
 	background-color: var(--black);
-	margin: 0 10px;
+	margin: 0 0.7vh;
 }
 
 .icons__hamburger-button {
 	display: inline-block;
 	position: relative;
-	height: 55px;
-	padding: 0 0 0 10px;
+	height: 3.5vh;
+	padding: 0 0 0 0.7vh;
 }
 
 .icons__cross {
 	display: inline-block;
 	position: relative;
-	height: 55px;
-	padding: 0 0 0 10px;
+	height: 3.5vh;
+	padding: 0 0 0 0.7vh;
 }
 
 .icons--hidden {
@@ -84,19 +85,19 @@ body {
 	position: fixed;
 	list-style-type: none;
 	opacity: 0;
-	top: 160px;
+	top: 8vh;
 	background-color: var(--white);
 	padding: 0;
 	margin: 0;
-	width: 30%;
-	right: 100px;
+	width: 20vh;
+	right: 6vh;
 	z-index: 2;
 	transition: opacity 0.4s, top 0.4s;
 }
 
 .cart-menu--fade-in {
 	opacity: 1;
-	top: 180px;
+	top: 10vh;
 }
 
 .cart-menu--hidden {
@@ -106,22 +107,22 @@ body {
 .cart-menu__item {
 	display: block;
 	text-align: center;
-	font-size: 30px;
+	font-size: 2vh;
 	font-weight: bold;
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
-	letter-spacing: 3px;
-	line-height: 120px;
+	letter-spacing: 0.3vh;
+	line-height: 8vh;
 }
 
 .menu {
 	list-style-type: none;
 	opacity: 0;
-	top: 110px;
+	top: 5.5vh;
 	position: fixed;
-	padding: 16px 0;
-	width: 100%;
+	width: 100vw;
+	padding: 0;
 	background-color: var(--white);
 	z-index: 1;
 	transition: opacity 0.4s, top 0.4s;
@@ -129,11 +130,13 @@ body {
 
 .menu--fade-in {
 	opacity: 1;
-	top: 130px;
+	top: 7.5vh;
+	width: 100vw;
 }
 
 .menu--hidden {
-	pointer-events: none;
+	pointer-events: none !important;
+	width: 100vw;
 }
 
 .menu_search-item {
@@ -144,11 +147,11 @@ body {
 .search__input {
 	border: none;
 	display: inline-block;
-	font-size: 36px;
+	font-size: 2.5vh;
 	font-weight: bold;
-	line-height: 120px;
-	padding-left: 30px;
-	width: 100%;
+	line-height: 8.5vh;
+	padding-left: 3vw;
+	width: 97vw;
 }
 
 .search__input:focus {
@@ -162,9 +165,10 @@ body {
 .search__icon {
 	display: inline-block;
 	position: absolute;
-	right: 30px;
-	font-size: 36px;
-	top: 55px;
+	right: 3vw;
+	width: 3vh;
+	height: auto;
+	top: 3vh;
 }
 
 .search__icon--hidden {
@@ -173,15 +177,15 @@ body {
 
 .menu__item {
 	font-weight: bold;
-	border-top: 4px solid var(--menuGray);
-	font-size: 30px;
+	border-top: 0.4vh solid var(--menuGray);
+	font-size: 2vh;
 	text-transform: uppercase;
-	letter-spacing: 5px;
+	letter-spacing: 0.3vh;
 	font-family: "PierSans";
 	margin: 0;
-	padding: 0 0 0 30px;
-	line-height: 120px;
-	width: 100vw;
+	padding: 0 0 0 3vw;
+	line-height: 8.5vh;
+	width: 97vw;
 }
 
 .menu__item:hover {
@@ -190,14 +194,14 @@ body {
 
 .back-item__text {
 	font-weight: bold;
-	font-size: 30px;
-	letter-spacing: 5px;
+	font-size: 2vh;
+	letter-spacing: 0.3vh;
 	text-align: right;
 	font-family: "PierSans";
 	text-transform: uppercase;
 	margin: 0;
-	padding: 0 30px 0 0;
-	line-height: 120px;
+	padding: 0 3vw 0 0;
+	line-height: 8.5vh;
 }
 
 .back {
@@ -228,12 +232,12 @@ body {
 
 .item-claster--submenu {
 	position: absolute;
-	top: 152px;
+	top: 8.35vh;
 }
 
 .menu__arrow {
 	display: inline-block;
-	height: 40px;
+	height: 2.5vh;
 	align-self: center;
 }
 
@@ -241,11 +245,11 @@ body {
 	display: flex;
 	justify-content: space-around;
 	position: absolute;
-	right: 30px;
-	top: 15px;
-	border: 4px solid var(--menuGray);
-	height: 90px;
-	width: 90px;
+	right: 3vw;
+	top: 1.2vh;
+	border: 0.4vh solid var(--menuGray);
+	height: 6vh;
+	width: 6vh;
 	overflow: hidden;
 }
 
@@ -253,15 +257,15 @@ body {
 	display: flex;
 	justify-content: space-around;
 	position: absolute;
-	left: 30px;
-	top: 15px;
-	border: 4px solid var(--menuGray);
-	height: 90px;
-	width: 90px;
+	left: 3vw;
+	top: 0.8vh;
+	border: 0.4vh solid var(--menuGray);
+	height: 6vh;
+	width: 6vh;
 }
 
 .menu__submenu-arrow-outline {
-	right: 60px;
+	right: 6vw;
 }
 
 .menu__expandable-item {
@@ -274,15 +278,15 @@ body {
 
 .menu__submenu-item {
 	font-weight: bold;
-	border-top: 4px solid var(--menuGray);
-	font-size: 30px;
-	letter-spacing: 5px;
+	border-top: 0.4vh solid var(--menuGray);
+	font-size: 2vh;
+	letter-spacing: 0.2vh;
 	white-space: pre;
 	font-family: "PierSans";
 	margin: 0;
-	padding: 0 0 0 30px;
-	line-height: 120px;
-	width: 100vw;
+	padding: 0 0 0 3vw;
+	line-height: 8.5vh;
+	width: 97vw;
 }
 
 .menu__submenu-item:hover {
@@ -291,7 +295,7 @@ body {
 
 .home {
 	position: relative;
-	margin: 200px 0 225px;
+	margin: 14vh 0;
 }
 
 .home__shader {
@@ -303,42 +307,40 @@ body {
 }
 
 .home__img {
-	width: 100%;
-	height: auto;
+	width: 100vw;
 }
 
 .home__text-box {
 	position: absolute;
-	width: 900px;
-	left: 70px;
-	bottom: 435px;
+	width: 90vw;
+	left: 6vw;
+	bottom: 30%;
 }
 
 .home__text--white {
 	font-family: "PierSans";
 	color: var(--white);
-	font-size: 80px;
-	margin: 0 0 20px;
+	font-size: 8.5vw;
+	margin: 0 0 2.5vw;
 	font-weight: bold;
-	letter-spacing: 15px
+	letter-spacing: 1.8vw;
 }
 
 .home__text--crimson {
 	font-family: "PierSans";
 	color: var(--crimson);
-	font-size: 65px;
-	margin: 0 0 50px;
+	font-size: 7vw;
+	margin: 0 0 6.5vw;
 	font-weight: bold;
-	letter-spacing: 10px;
+	letter-spacing: 1.5vw;
 }
 
 .home__arrow-container {
 	position: absolute;
 	display: flex;
-	bottom: 150px;
-	justify-content: space-between;
-	width: 365px;
-	left: 70px;
+	bottom: 18vw;
+	justify-content: space-evenly;
+	width: 50vw;
 }
 
 .home__arrow-outline {
@@ -346,15 +348,14 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: space-around;
-	border: 6px solid var(--white);
-	height: 150px;
-	width: 150px;
-	font-size: 192px;
+	border: 0.6vw solid var(--white);
+	height: 16vw;
+	width: 16vw;
 	color: var(--white);
 }
 
 .home__arrow {
-	height: 100px;
+	height: 8vw;
 	width: auto;
 	align-self: center;
 }
@@ -366,31 +367,31 @@ body {
 }
 
 .building__img1 {
-	width: 85%;
+	width: 85vw;
 	height: auto;
-	padding-left: 120px;
+	padding: 0 0 0 12vw;
 }
 
 .building__img2 {
 	position: relative;
-	width: 85%;
+	width: 85vw;
 	height: auto;
-	bottom: 120px;
-	padding-left: 30px;
+	bottom: 12vw;
+	padding: 0 0 0 3vw;
 }
 
 .about {
 	display: flex;
 	flex-direction: column;
-	padding: 100px 30px 180px;
+	padding: 12vw 3vw 20vw;
 }
 
 .about__title {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
-	letter-spacing: 30px;
-	font-size: 144px;
+	letter-spacing: 4vw;
+	font-size: 15vw;
 	font-weight: bold;
 }
 
@@ -398,9 +399,10 @@ body {
 	font-family: "PierSans";
 	text-transform: uppercase;
 	color: var(--crimson);
-	letter-spacing: 3px;
-	padding: 35px 0 35px;
-	font-size: 14px;
+	letter-spacing: 0.6vw;
+	padding: 3vw 0 3vw;
+	font-size: 3.5vw;
+	font-weight: bold;
 	margin: 0;
 }
 
@@ -408,28 +410,28 @@ body {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
-	letter-spacing: 3px;
-	line-height: 70px;
-	font-size: 20px;
+	letter-spacing: 0.6vw;
+	line-height: 8vw;
+	font-size: 4vw;
 }
 
 .gallery {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--lightGray);
-	padding: 180px 20px 180px;
+	padding: 20vw 0;
 }
 
 .gallery__row {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+	padding: 0 1.5vw;
 }
 
 .gallery__img {
-	width: 50%;
-	height: auto;
-	padding: 15px;
+	width: 50vw;
+	padding: 1.5vw 1.5vw;
 }
 
 .gallery__title {
@@ -437,8 +439,8 @@ body {
 	font-family: "PierSans";
 	margin: 0;
 	padding: 0;
-	letter-spacing: 30px;
-	font-size: 144px;
+	letter-spacing: 4vw;
+	font-size: 15vw;
 	font-weight: bold;
 }
 
@@ -446,11 +448,12 @@ body {
 	color: var(--crimson);
 	text-align: center;
 	font-family: "PierSans";
+	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0;
-	padding: 35px 0 90px;
-	letter-spacing: 3px;
-	font-size: 14px;
+	padding: 3vw 0 9vw;
+	letter-spacing: 0.6vw;
+	font-size: 3.5vw;
 }
 
 .footer {
@@ -458,7 +461,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--gray);
-	padding: 30px;
+	padding: 3vw;
 }
 
 .social-networks {
@@ -467,35 +470,36 @@ body {
 }
 
 .social-networks__icon {
-	height: 108px;
-	padding-left: 8px;
-	padding-right: 8px;
+	height: 12vw;
+	padding: 0 1.5vw;
 }
 
 .footer__logo {
 	align-self: center;
-	width: 30%;
+	width: 30vw;
 	height: auto;
-	padding-bottom: 50px;
-	padding-top: 50px;
+	padding-bottom: 5vw;
+	padding-top: 5vw;
 }
 
 .footer__follow-us {
 	text-align: center;
 	font-family: "PierSans";
 	text-transform: uppercase;
+	font-weight: bold;
 	margin: 0;
-	padding: 50px 0;
-	letter-spacing: 3px;
-	font-size: 30px;
+	padding: 5vw 0;
+	letter-spacing: 0.5vw;
+	font-size: 3.5vw;
 }
 
 .footer__copyright {
 	text-align: center;
 	font-family: "PierSans";
 	text-transform: uppercase;
+	font-weight: bold;
 	margin: 0;
-	padding: 0 0 30px;
-	letter-spacing: 3px;
-	font-size: 30px;
+	padding: 0 0 3vw;
+	letter-spacing: 0.5vw;
+	font-size: 3.5vw;
 }
