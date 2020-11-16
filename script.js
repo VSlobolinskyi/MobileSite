@@ -8,14 +8,14 @@ function closure(){
   var bars = document.getElementById("bars");
   var searchIcon = document.getElementById('searchIcon');
   var carouselOrder = ["img1", "img2", "img3"];
-  var carouselCrurrent = 0;
+  var carouselCurrent = 0;
 
   function toggleCartMenu() {
     cartMenu.classList.remove("cart-menu--hidden");
-    cartMenu.classList.toggle("cart-menu--fade-in");
+    cartMenu.classList.toggle("cart-menu--fade");
     function cartMenuUndisplay() {
       cartMenu = document.getElementById("cartMenu");
-      if (!cartMenu.classList.contains("cart-menu--fade-in")) {
+      if (!cartMenu.classList.contains("cart-menu--fade")) {
         cartMenu.classList.add("cart-menu--hidden");
       }
     }
@@ -26,23 +26,22 @@ function closure(){
     cross.classList.toggle("icons--hidden");
     bars.classList.toggle("icons--hidden");
     menu.classList.remove("menu--hidden");
-    menu.classList.toggle("menu--fade-in");
+    menu.classList.toggle("menu--fade");
   }
 
   function closeMenu() {
     cross.classList.toggle("icons--hidden");
     bars.classList.toggle("icons--hidden");
-    menu.classList.toggle("menu--fade-in");
+    menu.classList.toggle("menu--fade");
     function resetMenu() {
       var clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
       var clasterToShow = document.getElementById("root");
       clasterToHide.classList.add("item-claster--hidden");
       clasterToHide.classList.remove("item-claster--visible");
       clasterToHide.classList.remove("item-claster--submenu");
-      clasterToShow.classList.add("item-claster--visible");
       clasterToShow.classList.remove("item-claster--hidden");
       back.classList.add("back--hidden");
-      document.getElementById("menu").classList.add("menu--hidden");
+      menu.classList.add("menu--hidden");
       submenuOrder = ["root"];
     }
     setTimeout(resetMenu, 400);
@@ -59,7 +58,6 @@ function closure(){
     clasterToShow.classList.remove("item-claster--hidden");
     clasterToShow.classList.add("item-claster--submenu");
     back.classList.remove("back--hidden");
-    back.classList.add("back--visible");
   }
 
   function closeSubmenu() {
@@ -82,18 +80,18 @@ function closure(){
     if(carouselCurrent == carouselOrder.length-1){
       return;
     }
-    getElementById(carouselOrder[carouselCurrent]).classList.add("home__img--hidden");
+    document.getElementById(carouselOrder[carouselCurrent]).classList.add("home__img--hidden");
     carouselCurrent++;
-    getElementById(carouselOrder[carouselCurrent]).classList.remove("home__img--hidden")
+    document.getElementById(carouselOrder[carouselCurrent]).classList.remove("home__img--hidden")
   }
 
   function carouselLeft(){
-    if(carouselCurrent == 0){
+    if(carouselCurrent == 0){      
       return;
     }
-    getElementById(carouselOrder[carouselCurrent]).classList.add("home__img--hidden");
+    document.getElementById(carouselOrder[carouselCurrent]).classList.add("home__img--hidden");
     carouselCurrent--;
-    getElementById(carouselOrder[carouselCurrent]).classList.remove("home__img--hidden")
+    document.getElementById(carouselOrder[carouselCurrent]).classList.remove("home__img--hidden")
   }
 
   function inputActive() {
@@ -110,15 +108,15 @@ function closure(){
     "openSubmenu": openSubmenu,
     "closeSubmenu": closeSubmenu,
     "inputActive": inputActive, 
-    "inputInactive": inputInactive
+    "inputInactive": inputInactive,
+    "carouselLeft": carouselLeft,
+    "carouselRight": carouselRight
   };
 
   return dict;
 }
 
-
 var functionDict = closure();
-
 document.getElementById("cart").addEventListener("click", functionDict["toggleCartMenu"]);
 document.getElementById("bars").addEventListener("click", functionDict["openMenu"]);
 document.getElementById("cross").addEventListener("click", functionDict["closeMenu"]);
@@ -128,3 +126,6 @@ document.getElementById("features").addEventListener("click", function() {
 document.getElementById("back").addEventListener("click", functionDict["closeSubmenu"]);
 document.getElementById("search").addEventListener("onfocus", functionDict["inputActive"]);
 document.getElementById("search").addEventListener("onblur", functionDict["inputInactive"]);
+document.getElementById("arrowLeft").addEventListener("click", functionDict["carouselLeft"]);
+document.getElementById("arrowRight").addEventListener("click", functionDict["carouselRight"]);
+
