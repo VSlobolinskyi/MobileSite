@@ -309,9 +309,14 @@ body {
 
 .home__img {
 	position: absolute;
+	opacity: 1;
 	width: 100vw;
-	padding: 0;
-	margin: 0;
+	transition: opacity 0.4s;
+}
+
+.home__img--hidden {
+	visibility: hidden;
+	opacity: 1;
 }
 
 .home__text-box {

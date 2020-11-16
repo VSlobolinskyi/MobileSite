@@ -1,4 +1,5 @@
 function closure(){
+  
   var submenuOrder = ["root"];
   var cartMenu = document.getElementById("cartMenu");
   var menu = document.getElementById("menu");
@@ -6,6 +7,8 @@ function closure(){
   var cross = document.getElementById("cross");
   var bars = document.getElementById("bars");
   var searchIcon = document.getElementById('searchIcon');
+  var carouselOrder = ["img1", "img2", "img3"];
+  var carouselCrurrent = 0;
 
   function toggleCartMenu() {
     cartMenu.classList.remove("cart-menu--hidden");
@@ -75,6 +78,24 @@ function closure(){
     submenuOrder.pop();
   }
 
+  function carouselRight(){
+    if(carouselCurrent == carouselOrder.length-1){
+      return;
+    }
+    getElementById(carouselOrder[carouselCurrent]).classList.add("home__img--hidden");
+    carouselCurrent++;
+    getElementById(carouselOrder[carouselCurrent]).classList.remove("home__img--hidden")
+  }
+
+  function carouselLeft(){
+    if(carouselCurrent == 0){
+      return;
+    }
+    getElementById(carouselOrder[carouselCurrent]).classList.add("home__img--hidden");
+    carouselCurrent--;
+    getElementById(carouselOrder[carouselCurrent]).classList.remove("home__img--hidden")
+  }
+
   function inputActive() {
     searchIcon.classList.toggle("search__icon--hidden");
   }
@@ -82,18 +103,28 @@ function closure(){
   function inputInactive() {
     searchIcon.classList.toggle("search__icon--hidden");
   }
-  return [toggleCartMenu, openMenu, closeMenu, openSubmenu, closeSubmenu, inputActive, inputInactive];
+  let dict = {
+    "toggleCartMenu": toggleCartMenu,
+    "openMenu": openMenu,
+    "closeMenu": closeMenu, 
+    "openSubmenu": openSubmenu,
+    "closeSubmenu": closeSubmenu,
+    "inputActive": inputActive, 
+    "inputInactive": inputInactive
+  };
+
+  return dict;
 }
 
 
-var functionArray = closure();
+var functionDict = closure();
 
-document.getElementById("cart").addEventListener("click", functionArray[0]);
-document.getElementById("bars").addEventListener("click", functionArray[1]);
-document.getElementById("cross").addEventListener("click", functionArray[2]);
+document.getElementById("cart").addEventListener("click", functionDict["toggleCartMenu"]);
+document.getElementById("bars").addEventListener("click", functionDict["openMenu"]);
+document.getElementById("cross").addEventListener("click", functionDict["closeMenu"]);
 document.getElementById("features").addEventListener("click", function() {
-  functionArray[3]("features");
+  functionDict["openSubmenu"]("features");
 });
-document.getElementById("back").addEventListener("click", functionArray[4]);
-document.getElementById("search").addEventListener("onfocus", functionArray[5]);
-document.getElementById("search").addEventListener("onblur", functionArray[6]);
+document.getElementById("back").addEventListener("click", functionDict["closeSubmenu"]);
+document.getElementById("search").addEventListener("onfocus", functionDict["inputActive"]);
+document.getElementById("search").addEventListener("onblur", functionDict["inputInactive"]);
