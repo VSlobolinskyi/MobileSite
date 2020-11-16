@@ -296,6 +296,7 @@ body {
 .home {
 	position: relative;
 	margin: 14vh 0;
+	height: 140.75vw;
 }
 
 .home__shader {
@@ -307,7 +308,10 @@ body {
 }
 
 .home__img {
+	position: absolute;
 	width: 100vw;
+	padding: 0;
+	margin: 0;
 }
 
 .home__text-box {
