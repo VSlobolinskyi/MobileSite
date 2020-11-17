@@ -10,11 +10,11 @@
         <div class="header">
             <img src="icons/renome.svg" class="header__logo" alt="Renome logo">  
             <div class="icons">
-                <img src="icons/cart_icon.svg" class="icons__cart" id="cart" alt="Cart icon" onclick="toggleCartMenu()">
+                <img src="icons/cart_icon.svg" class="icons__cart" id="cart" alt="Cart icon">
                 <p class="icons__cart-status" id="cartStatus">5</p>
                 <div class="icons__stick"></div>
-                <img src="icons/hamburger_button.svg" class="icons__hamburger-button" id="bars" alt="Hamburger button" onclick="openMenu()">
-                <img src="icons/cross_icon.svg" class="icons__cross icons--hidden" id="cross" alt="Cross icon" onclick="closeMenu()">
+                <img src="icons/hamburger_button.svg" class="icons__hamburger-button" id="bars" alt="Hamburger button">
+                <img src="icons/cross_icon.svg" class="icons__cross icons--hidden" id="cross" alt="Cross icon">
             </div>
         </div> 
         <ul class="cart-menu cart-menu--hidden" id="cartMenu">
@@ -23,17 +23,17 @@
             <li class="cart-menu__item">Checkout</li>
         </ul>
         <ul class="menu menu--hidden" id="menu">
-            <li class="menu__back-item back--hidden" id="back" onclick="closeSubmenu()">
+            <li class="menu__back-item back--hidden" id="back">
                 <p class="back-item__text">back</p>
                 <div class="menu__left-arrow-outline">
                     <img src="icons/arrow_left_black.svg" class="menu__arrow" alt="Black arrow left">
                 </div>
             </li>
             <li>
-                <ul class="item-claster--visible" id="root">
+                <ul class="item-claster" id="root">
                     <li class="menu__search-item">
-                        <input type="text" placeholder="Search..." class="search__input" onfocus="inputActive()" onblur="inputInactive()">
-                        <img src="icons/search_icon.svg"class="search__icon search__icon--visible" id="searchIcon">
+                        <input type="text" placeholder="Search..." class="search__input" id="search">
+                        <img src="icons/search_icon.svg" class="search__icon search__icon--visible" id="searchIcon" alt="Search icon">
                     </li>
                     <li class="menu__item">home</li>
                     <li class="menu__item">about</li>
@@ -41,13 +41,13 @@
                     <li class="menu__item">reservations</li>
                     <li class="menu__item">blog</li>
                     <li>
-                        <div id="features" class="menu__expandable-item" onclick="openSubmenu(this)">
+                        <div id="features" class="menu__expandable-item">
                             <p class="menu__item">features</p>
                             <div class="menu__right-arrow-outline">
                                 <img src="icons/arrow_right_black.svg" class="menu__arrow" alt="Black arrow right">
                             </div>
                          </div>
-                        <ul class="item-claster--hidden" id="featuresSubmenu">
+                        <ul class="item-claster item-claster--hidden" id="featuresSubmenu">
                             <li class="menu__submenu-item">One page</li>
                             <li class="menu__submenu-item">Portfolio</li>
                             <li class="menu__submenu-item">Shortcodes</li>
@@ -59,17 +59,19 @@
             </li>
         </ul>
         <div class="home" id="home">
+            <img src="images/carousel_img_1.png" class="home__img" alt="Delecious omlette" id="img1">
+            <img src="images/carousel_img_2.png" class="home__img home__img--hidden" alt="Captivating desert" id="img2">
+            <img src="images/carousel_img_3.png" class="home__img home__img--hidden" alt="Fragrant spices" id="img3">
             <div class="home__shader"></div> 
-            <img src="images/carousel_img_1.png" class="home__img" alt="Delecious omlette">
             <div class="home__text-box">
                 <p class="home__text--white">made with love</p>
                 <p class="home__text--crimson">for you</p>
             </div>
             <div class="home__arrow-container">
-                <div class="home__arrow-outline">
+                <div class="home__arrow-outline" id="arrowLeft">
                     <img src="icons/arrow_left_white.svg" class="home__arrow" alt="White arrow left">
                 </div>
-                <div class="home__arrow-outline">
+                <div class="home__arrow-outline" id="arrowRight">
                     <img src="icons/arrow_right_white.svg" class="home__arrow" alt="White arrow right">
                 </div>
             </div>

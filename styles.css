@@ -95,7 +95,7 @@ body {
 	transition: opacity 0.4s, top 0.4s;
 }
 
-.cart-menu--fade-in {
+.cart-menu--fade{
 	opacity: 1;
 	top: 10vh;
 }
@@ -128,14 +128,14 @@ body {
 	transition: opacity 0.4s, top 0.4s;
 }
 
-.menu--fade-in {
+.menu--fade{
 	opacity: 1;
 	top: 7.5vh;
 	width: 100vw;
 }
 
 .menu--hidden {
-	pointer-events: none !important;
+	pointer-events: none;
 	width: 100vw;
 }
 
@@ -204,12 +204,16 @@ body {
 	line-height: 8.5vh;
 }
 
-.back {
-	display: block;
-}
-
 .back--hidden {
 	display: none;
+}
+
+.item-claster {
+	height: auto;
+	background-color: var(--white);
+	flex-direction: column;
+	list-style-type: none;
+	padding: 0;
 }
 
 .item-claster--hidden {
@@ -221,13 +225,8 @@ body {
 }
 
 .item-claster--visible {
-	height: auto;
 	visibility: visible;
-	pointer-events: auto;
-	background-color: var(--white);
-	flex-direction: column;
-	list-style-type: none;
-	padding: 0;
+	pointer-events: initial;
 }
 
 .item-claster--submenu {
@@ -296,6 +295,7 @@ body {
 .home {
 	position: relative;
 	margin: 14vh 0;
+	height: 140.75vw;
 }
 
 .home__shader {
@@ -307,7 +307,15 @@ body {
 }
 
 .home__img {
+	position: absolute;
+	visibility: visible;
+	right: 0;
+	left: 0;
 	width: 100vw;
+}
+
+.home__img--hidden {
+	visibility: hidden;
 }
 
 .home__text-box {
