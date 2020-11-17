@@ -1,20 +1,19 @@
+
 function closure(){
-  
-  var submenuOrder = ["root"];
-  var cartMenu = document.getElementById("cartMenu");
-  var menu = document.getElementById("menu");
-  var back = document.getElementById("back");
-  var cross = document.getElementById("cross");
-  var bars = document.getElementById("bars");
-  var searchIcon = document.getElementById('searchIcon');
-  var carouselOrder = ["img1", "img2", "img3"];
-  var carouselCurrent = 0;
+  let submenuOrder = ["root"];
+  const cartMenu = document.getElementById("cartMenu");
+  const menu = document.getElementById("menu");
+  const back = document.getElementById("back");
+  const cross = document.getElementById("cross");
+  const bars = document.getElementById("bars");
+  const searchIcon = document.getElementById('searchIcon');
+  const carouselOrder = ["img1", "img2", "img3"];
+  let carouselCurrent = 0;
 
   function toggleCartMenu() {
     cartMenu.classList.remove("cart-menu--hidden");
     cartMenu.classList.toggle("cart-menu--fade");
     function cartMenuUndisplay() {
-      cartMenu = document.getElementById("cartMenu");
       if (!cartMenu.classList.contains("cart-menu--fade")) {
         cartMenu.classList.add("cart-menu--hidden");
       }
@@ -34,8 +33,8 @@ function closure(){
     bars.classList.toggle("icons--hidden");
     menu.classList.toggle("menu--fade");
     function resetMenu() {
-      var clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
-      var clasterToShow = document.getElementById("root");
+      let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
+      let clasterToShow = document.getElementById("root");
       clasterToHide.classList.add("item-claster--hidden");
       clasterToHide.classList.remove("item-claster--visible");
       clasterToHide.classList.remove("item-claster--submenu");
@@ -49,8 +48,8 @@ function closure(){
 
   function openSubmenu(itemId) {
     submenuOrder.push(itemId+"Submenu");
-    var clasterToShow = document.getElementById(submenuOrder[submenuOrder.length - 1]);
-    var clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 2]);
+    let clasterToShow = document.getElementById(submenuOrder[submenuOrder.length - 1]);
+    let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 2]);
     clasterToHide.classList.add("item-claster--hidden");
     clasterToHide.classList.remove("item-claster--visible");
     clasterToHide.classList.remove("item-claster--submenu");
@@ -61,8 +60,8 @@ function closure(){
   }
 
   function closeSubmenu() {
-    var clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
-    var clasterToShow = document.getElementById(submenuOrder[submenuOrder.length - 2]);
+    let clasterToHide = document.getElementById(submenuOrder[submenuOrder.length - 1]);
+    let clasterToShow = document.getElementById(submenuOrder[submenuOrder.length - 2]);
     clasterToHide.classList.add("item-claster--hidden");
     clasterToHide.classList.remove("item-claster--visible");
     clasterToShow.classList.remove("item-claster--submenu");
@@ -116,7 +115,7 @@ function closure(){
   return dict;
 }
 
-var functionDict = closure();
+let functionDict = closure();
 document.getElementById("cart").addEventListener("click", functionDict["toggleCartMenu"]);
 document.getElementById("bars").addEventListener("click", functionDict["openMenu"]);
 document.getElementById("cross").addEventListener("click", functionDict["closeMenu"]);
