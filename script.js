@@ -93,29 +93,29 @@ function closeSubmenu() {
 }
 
 function carouselRight() {
-  carouselOrder[carouselCurrent].classList.remove("home__img--top");
-  carouselOrder[carouselCurrent].classList.add("home__img--hidden");
+  carouselOrder[carouselCurrent].classList.remove("home__img-container--top");
+  carouselOrder[carouselCurrent].classList.add("home__img-container--hidden");
   if(carouselCurrent == carouselOrder.length-1) {
     carouselCurrent = 0;
   }
   else {
     carouselCurrent++;
   }
-  carouselOrder[carouselCurrent].classList.add("home__img--top");
-  carouselOrder[carouselCurrent].classList.remove("home__img--hidden");
+  carouselOrder[carouselCurrent].classList.add("home__img-container--top");
+  carouselOrder[carouselCurrent].classList.remove("home__img-container--hidden");
 }
 
 function carouselLeft() {
-  carouselOrder[carouselCurrent].classList.add("home__img--top");
-  carouselOrder[carouselCurrent].classList.add("home__img--hidden");
+  carouselOrder[carouselCurrent].classList.add("home__img-container--top");
+  carouselOrder[carouselCurrent].classList.add("home__img-container--hidden");
   if(carouselCurrent == 0) { 
     carouselCurrent = carouselOrder.length-1;
   }
   else {
     carouselCurrent--;
   }
-  carouselOrder[carouselCurrent].classList.remove("home__img--top");
-  carouselOrder[carouselCurrent].classList.remove("home__img--hidden");     
+  carouselOrder[carouselCurrent].classList.remove("home__img-container--top");
+  carouselOrder[carouselCurrent].classList.remove("home__img-container--hidden");     
 }
 
 function inputActive() {
