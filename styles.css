@@ -470,7 +470,7 @@ a {
 .building__img2 {
 	position: relative;
 	width: 81%;
-	bottom: 12%;
+	margin: -12% 0 0;
 	padding: 0 0 0 3%;
 }
 
